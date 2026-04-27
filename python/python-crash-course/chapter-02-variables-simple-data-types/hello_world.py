@@ -7,3 +7,7 @@ print(message)
 message = "Hello Python Crash Course World!"
 print(message)
 
+def exchange_money(budget, exchange_rate):
+    return budget / exchange_rate
+
+print(exchange_money(127.5, 1.2))
