@@ -517,3 +517,16 @@ After completing these drills:
 4. Complete Exercism: Guido’s Gorgeous Lasagna.
 5. Send one solution for review.
 6. Refactor after feedback.
+
+# Quiz
+1. Why does f"{age}" not need str(age)?
+- Python automatically converts age to a string.
+
+2. Why is it better to reuse preparation_time_in_minutes()?
+-  Don't repeat your self DRY   
+
+3. What does if __name__ == "__main__": protect you from?
+- When you import functions from this file for tests, the print calls will not automatically run.
+
+4. Why does Python need a colon after def favorite_language(name, language):?
+-  Python uses the colon to mark the start of an indented code block.
