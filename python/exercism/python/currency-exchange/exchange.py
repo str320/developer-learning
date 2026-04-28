@@ -48,7 +48,7 @@ def get_number_of_bills(amount, denomination):
     :return: int - number of bills that can be obtained from the amount.
     """
 
-    return int((amount // denomination))
+    return int(amount // denomination)
 
 
 
