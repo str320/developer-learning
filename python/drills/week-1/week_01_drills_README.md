@@ -2,8 +2,8 @@
 
 ## Focus
 
-Week 1 focuses on the basics you need before starting the first Exercism exercises:
-
+Week 1 focuses on the basics you need before starting the first 
+Exercism exercises:
 - running Python files
 - `print()` vs `return`
 - variables
