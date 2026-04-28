@@ -1,13 +1,10 @@
 #Drill 1 — print() vs return
 
 def show_greeting(name):
-    print(f"Hello, {name}")
+    print(f"Hello, {name}!")
 
 def make_greeting(name):
-    return f"Hello, {name}"
-
-show_greeting("Alice")
-message = make_greeting("Bob")
+    return f"Hello, {name}!"
 
 #Drill 2 — Simple Arithmetic Functions
 
@@ -48,7 +45,7 @@ def introduce(name, language):
 #Drill 6 — Type Conversion
 
 def age_message(name, age):
-    return f"{name} is {str(age)} years old"
+    return f"{name} is {age} years old"
 
 def add_string_numbers(first, second):
     return int(first) + int(second)
