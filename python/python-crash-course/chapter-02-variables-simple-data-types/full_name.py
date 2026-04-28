@@ -15,7 +15,7 @@ print(favorite_language)
 
 # Removing a prefix from a string
 nostarch_url = "https://nostarch.com"
-nostarch_url.removeprefix("https://")
-print(nostarch_url)
+simple_url = nostarch_url.removeprefix("https://")
+print(simple_url)
 
 
