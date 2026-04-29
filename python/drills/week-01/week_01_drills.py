@@ -45,7 +45,7 @@ def introduce(name, language):
 #Drill 6 — Type Conversion
 
 def age_message(name, age):
-    return f"{name} is {age} years old"
+    return f"{name} is {age} years old."
 
 def add_string_numbers(first, second):
     return int(first) + int(second)

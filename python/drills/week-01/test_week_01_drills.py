@@ -27,7 +27,7 @@ assert bake_time_remaining(30) == 10
 assert preparation_time_in_minutes(3) == 6
 assert elapsed_time_in_minutes(3, 20) == 26
 
-assert introduce("Strat", "Python") == "Hi I am Strat and I am learning Python."
+assert introduce("Strat", "Python") == "Hi, I am Strat and I am learning Python."
 assert age_message("Ada", 36) == "Ada is 36 years old."
 assert add_string_numbers("10", "5") == 15
 
