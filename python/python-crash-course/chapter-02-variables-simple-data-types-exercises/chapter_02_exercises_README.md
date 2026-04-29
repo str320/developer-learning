@@ -57,8 +57,16 @@ Assign a message to a variable, and then print that message.
 
 ```python
 message = "I am learning Python."
+```
+
+<details>
+<summary>Show starter code</summary>
+
+```python
 print(message)
 ```
+
+</details>
 
 ## Goal
 
@@ -85,11 +93,19 @@ Then change the value of the variable to a new message and print the new message
 
 ```python
 message = "I am learning Python."
+```
+
+<details>
+<summary>Show starter code</summary>
+
+```python
 print(message)
 
 message = "I am learning variables and strings."
 print(message)
 ```
+
+</details>
 
 ## Goal
 
@@ -121,8 +137,16 @@ Hello Eric, would you like to learn some Python today?
 
 ```python
 name = "Eric"
+```
+
+<details>
+<summary>Show starter code</summary>
+
+```python
 print(f"Hello {name}, would you like to learn some Python today?")
 ```
+
+</details>
 
 ## Goal
 
@@ -153,11 +177,18 @@ Print that person’s name in:
 
 ```python
 name = "Eric"
+```
 
+<details>
+<summary>Show starter code</summary>
+
+```python
 print(name.lower())
 print(name.upper())
 print(name.title())
 ```
+
+</details>
 
 ## Goal
 
@@ -189,8 +220,16 @@ Albert Einstein once said, "A person who never made a mistake never tried anythi
 
 ```python
 quote = "A person who never made a mistake never tried anything new."
+```
+
+<details>
+<summary>Show starter code</summary>
+
+```python
 print(f'Albert Einstein once said, "{quote}"')
 ```
+
+</details>
 
 ## Goal
 
@@ -220,10 +259,17 @@ Repeat Exercise 2-5, but this time:
 ```python
 famous_person = "Albert Einstein"
 quote = "A person who never made a mistake never tried anything new."
+```
 
+<details>
+<summary>Show starter code</summary>
+
+```python
 message = f'{famous_person} once said, "{quote}"'
 print(message)
 ```
+
+</details>
 
 ## Goal
 
@@ -265,12 +311,19 @@ Then print the name using each stripping function:
 
 ```python
 name = "\tEric\n"
+```
 
+<details>
+<summary>Show starter code</summary>
+
+```python
 print(name)
 print(name.lstrip())
 print(name.rstrip())
 print(name.strip())
 ```
+
+</details>
 
 ## Goal
 
@@ -299,8 +352,16 @@ Use `removesuffix()` to display the filename without the file extension.
 
 ```python
 filename = "python_notes.txt"
+```
+
+<details>
+<summary>Show starter code</summary>
+
+```python
 print(filename.removesuffix(".txt"))
 ```
+
+</details>
 
 ## Important Note
 
@@ -340,11 +401,20 @@ Your output should be four lines, with the number `8` appearing once on each lin
 ## Starter code
 
 ```python
+# Write four print() calls.
+```
+
+<details>
+<summary>Show starter code</summary>
+
+```python
 print(5 + 3)
 print(10 - 2)
 print(4 * 2)
 print(16 / 2)
 ```
+
+</details>
 
 ## Note
 
@@ -391,10 +461,17 @@ Print that message.
 
 ```python
 favorite_number = 8
-message = f"My favorite number is {favorite_number}."
+```
 
+<details>
+<summary>Show starter code</summary>
+
+```python
+message = f"My favorite number is {favorite_number}."
 print(message)
 ```
+
+</details>
 
 ## Goal
 
@@ -428,10 +505,17 @@ If you do not have anything specific to write because the programs are simple, a
 # Strat
 # May 24
 # This program prints a simple message.
+```
 
+<details>
+<summary>Show starter code</summary>
+
+```python
 message = "I am learning Python."
 print(message)
 ```
+
+</details>
 
 ## Goal
 

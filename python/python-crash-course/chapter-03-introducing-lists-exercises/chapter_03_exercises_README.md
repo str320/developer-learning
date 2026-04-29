@@ -58,11 +58,18 @@ Print each person’s name by accessing each element in the list, one at a time.
 
 ```python
 names = ["ada", "eric", "guido"]
+```
 
+<details>
+<summary>Show starter code</summary>
+
+```python
 print(names[0])
 print(names[1])
 print(names[2])
 ```
+
+</details>
 
 ## Goal
 
@@ -90,11 +97,18 @@ The text of each message should be the same, but each message should include the
 
 ```python
 names = ["ada", "eric", "guido"]
+```
 
+<details>
+<summary>Show starter code</summary>
+
+```python
 print(f"Hello, {names[0].title()}!")
 print(f"Hello, {names[1].title()}!")
 print(f"Hello, {names[2].title()}!")
 ```
+
+</details>
 
 ## Goal
 
@@ -129,11 +143,18 @@ I would like to own a Honda motorcycle.
 
 ```python
 vehicles = ["Honda motorcycle", "Tesla car", "Yamaha bicycle"]
+```
 
+<details>
+<summary>Show starter code</summary>
+
+```python
 print(f"I would like to own a {vehicles[0]}.")
 print(f"I would like to drive a {vehicles[1]}.")
 print(f"I would like to ride a {vehicles[2]}.")
 ```
+
+</details>
 
 ## Goal
 
@@ -162,11 +183,18 @@ Print a message to each person inviting them to dinner.
 
 ```python
 guests = ["Ada Lovelace", "Alan Turing", "Grace Hopper"]
+```
 
+<details>
+<summary>Show starter code</summary>
+
+```python
 print(f"{guests[0]}, I would like to invite you to dinner.")
 print(f"{guests[1]}, I would like to invite you to dinner.")
 print(f"{guests[2]}, I would like to invite you to dinner.")
 ```
+
+</details>
 
 ## Goal
 
@@ -199,7 +227,12 @@ Do the following:
 
 ```python
 guests = ["Ada Lovelace", "Alan Turing", "Grace Hopper"]
+```
 
+<details>
+<summary>Show starter code</summary>
+
+```python
 print(f"{guests[1]} can't make it to dinner.")
 
 guests[1] = "Katherine Johnson"
@@ -208,6 +241,8 @@ print(f"{guests[0]}, I would like to invite you to dinner.")
 print(f"{guests[1]}, I would like to invite you to dinner.")
 print(f"{guests[2]}, I would like to invite you to dinner.")
 ```
+
+</details>
 
 ## Goal
 
@@ -242,7 +277,12 @@ Do the following:
 
 ```python
 guests = ["Ada Lovelace", "Katherine Johnson", "Grace Hopper"]
+```
 
+<details>
+<summary>Show starter code</summary>
+
+```python
 print("Good news! I found a bigger dinner table.")
 
 guests.insert(0, "Guido van Rossum")
@@ -256,6 +296,8 @@ print(f"{guests[3]}, I would like to invite you to dinner.")
 print(f"{guests[4]}, I would like to invite you to dinner.")
 print(f"{guests[5]}, I would like to invite you to dinner.")
 ```
+
+</details>
 
 ## Goal
 
@@ -299,7 +341,12 @@ guests = [
     "Grace Hopper",
     "Donald Knuth",
 ]
+```
 
+<details>
+<summary>Show starter code</summary>
+
+```python
 print("Sorry, I can invite only two people to dinner.")
 
 removed_guest = guests.pop()
@@ -322,6 +369,8 @@ del guests[0]
 
 print(guests)
 ```
+
+</details>
 
 ## Goal
 
@@ -360,7 +409,12 @@ Do the following:
 
 ```python
 places = ["japan", "canada", "iceland", "new zealand", "peru"]
+```
 
+<details>
+<summary>Show starter code</summary>
+
+```python
 print("Original list:")
 print(places)
 
@@ -393,6 +447,8 @@ print("\nReverse sorted permanently:")
 print(places)
 ```
 
+</details>
+
 ## Goal
 
 Understand the difference between temporary sorting and permanent sorting.
@@ -417,9 +473,16 @@ Use `len()` to print a message indicating the number of people you are inviting 
 
 ```python
 guests = ["Ada Lovelace", "Katherine Johnson", "Grace Hopper"]
+```
 
+<details>
+<summary>Show starter code</summary>
+
+```python
 print(f"I am inviting {len(guests)} people to dinner.")
 ```
+
+</details>
 
 ## Goal
 
@@ -467,7 +530,12 @@ Use these at least once:
 
 ```python
 languages = ["python", "javascript", "go", "rust", "java"]
+```
 
+<details>
+<summary>Show starter code</summary>
+
+```python
 print(languages[0])
 print(languages[-1])
 
@@ -492,6 +560,8 @@ print(languages)
 
 print(f"There are {len(languages)} languages in the list.")
 ```
+
+</details>
 
 ## Goal
 
