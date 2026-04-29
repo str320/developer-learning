@@ -36,3 +36,5 @@ motorcycles.remove(too_expensive)
 print(f"\n{too_expensive.title()} is too expensive and it was removed from the list.\n")
 print(motorcycles)
 print(f"\nThe list is empty now!!!\n", motorcycles)
+
+
