@@ -23,4 +23,4 @@ cars.reverse()
 print(f"\nThis is the list in reverse order: ", cars)
 
 #Finding the Length of a List
-print(f"\nFind the length of the list using the len function:", len(cars))
+print(f"\nFind the length of the list using the len() function:", len(cars))
