@@ -4,10 +4,10 @@ print(f"This is the list: ", cars)
 
 #Sorting a List Permanently with the sort() Method
 cars.sort()
-print(f"\nThis is the list shorted in alphabetical order: ", cars)
+print(f"\nThis is the list sorted in alphabetical order: ", cars)
 
 cars.sort(reverse=True)
-print(f"\nThis is the list shorted in reverse: ", cars)
+print(f"\nThis is the list sorted in reverse: ", cars)
 
 #Sorting a List Temporarily with the sorted() Function
 print(f"\nHere is the list: ", cars)

@@ -612,16 +612,16 @@ git push
 
 Mark each exercise when completed.
 
-- [ ] 3-1 Names
-- [ ] 3-2 Greetings
-- [ ] 3-3 Your Own List
-- [ ] 3-4 Guest List
-- [ ] 3-5 Changing Guest List
-- [ ] 3-6 More Guests
-- [ ] 3-7 Shrinking Guest List
-- [ ] 3-8 Seeing the World
-- [ ] 3-9 Dinner Guests
-- [ ] 3-10 Every Function
+- [x] 3-1 Names
+- [x] 3-2 Greetings
+- [x] 3-3 Your Own List
+- [x] 3-4 Guest List
+- [x] 3-5 Changing Guest List
+- [x] 3-6 More Guests
+- [x] 3-7 Shrinking Guest List
+- [x] 3-8 Seeing the World
+- [x] 3-9 Dinner Guests
+- [x] 3-10 Every Function
 
 ---
 
@@ -632,21 +632,32 @@ Answer these after finishing the chapter.
 ## Lists and Indexing
 
 1. What is a list?
+- A list is a collection of items in a particular order
 2. What does index `0` mean?
+- It's the first list item
 3. What does index `-1` mean?
+- It's the last item of the list
 4. What happens if I access an index that does not exist?
+- You get an `IndexError` because the list index is out of range.
 
 ## Modifying Lists
 
 5. What is the difference between `append()` and `insert()`?
+- `append()` adds a new item at the end of the list, and `insert()` adds a new item at a selected index
 6. What is the difference between `pop()` and `del`?
+- `pop()` removes an item and returns it, so I can still use the removed value. `del` removes an item without returning it.
 7. When should I use `remove()`?
+- When you know the value of the item you want to remove
+
 
 ## Organizing Lists
 
 8. What is the difference between `sort()` and `sorted()`?
+- sort() sorts the list permanently and sorted() sorts the list temporarily
 9. What does `reverse()` do?
+- `reverse()` permanently reverses the current order of the list.
 10. What does `len()` return?
+- It returns the number of items on the list
 
 ## Developer Habits
 

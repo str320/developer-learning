@@ -21,7 +21,7 @@ print(f"\nWe deleted the first item with name Ducati.\n", motorcycles)
 
 #Removing an Item Using the pop() Method and keep it's value
 popped_motorcycle = motorcycles.pop()
-print(f"\nTThe last motorcycle I owned was a {popped_motorcycle.title()} and was popped from the list.\n", motorcycles)
+print(f"\nThe last motorcycle I owned was a {popped_motorcycle.title()} and was popped from the list.\n", motorcycles)
 
 #Remember that each time you use pop(), the item you work with is no longer stored in the list.
 first_owned = motorcycles.pop(0)
