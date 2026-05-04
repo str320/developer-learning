@@ -31,24 +31,31 @@ python/python-crash-course/chapter-04-working-with-lists
 Recommended file names:
 
 ```text
-magicians.py
-first_numbers.py
+dimensions.py
 even_numbers.py
+first_numbers.py
+foods.py
+magicians.py
+players.py
 square_numbers.py
-pizzas.py
-animals.py
-counting_to_twenty.py
-one_million.py
-summing_a_million.py
-odd_numbers.py
-threes.py
-cubes.py
-cube_comprehension.py
-slices.py
-my_pizzas_your_pizzas.py
-more_loops.py
-buffet.py
-code_review.md
+squares.py
+```
+Exercise file names:
+
+```text
+exercise_4_1_pizzas.py
+exercise_4_2_animals.py
+exercise_4_3_counting_to_twenty.py
+exercise_4_4_one_million.py
+exercise_4_5_summing_a_million.py
+exercise_4_6_odd_numbers.py
+exercise_4_7_threes.py
+exercise_4_8_cubes.py
+exercise_4_9_cube_comprehension.py
+exercise_4_10_slices.py
+exercise_4_11_my_pizzas_your_pizzas.py
+exercise_4_12_more_loops.py
+exercise_4_13_buffet.py
 ```
 
 ---
