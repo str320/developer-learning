@@ -60,3 +60,4 @@ def test_menu_items():
 
 def test_digit_powers():
     assert digit_powers(153) == [1, 125, 27]
+
