@@ -1000,21 +1000,21 @@ git push
 
 Mark each exercise when completed.
 
-- [ ] 4-1 Pizzas
-- [ ] 4-2 Animals
-- [ ] 4-3 Counting to Twenty
-- [ ] 4-4 One Million
-- [ ] 4-5 Summing a Million
-- [ ] 4-6 Odd Numbers
-- [ ] 4-7 Threes
-- [ ] 4-8 Cubes
-- [ ] 4-9 Cube Comprehension
-- [ ] 4-10 Slices
-- [ ] 4-11 My Pizzas, Your Pizzas
-- [ ] 4-12 More Loops
-- [ ] 4-13 Buffet
-- [ ] 4-14 PEP 8
-- [ ] 4-15 Code Review
+- [x] 4-1 Pizzas
+- [x] 4-2 Animals
+- [x] 4-3 Counting to Twenty
+- [x] 4-4 One Million
+- [x] 4-5 Summing a Million
+- [x] 4-6 Odd Numbers
+- [x] 4-7 Threes
+- [x] 4-8 Cubes
+- [x] 4-9 Cube Comprehension
+- [x] 4-10 Slices
+- [x] 4-11 My Pizzas, Your Pizzas
+- [x] 4-12 More Loops
+- [x] 4-13 Buffet
+- [x] 4-14 PEP 8
+- [x] 4-15 Code Review
 
 ---
 
@@ -1025,45 +1025,70 @@ Answer these after finishing the chapter.
 ## Loops
 
 1. What does a `for` loop do?
+- Looping is important because it’s one of the most common ways a computer automates repetitive tasks.
 2. What is the loop variable?
+- It's associated with the value of the loop.
 3. Why does indentation matter in a loop?
+- Because it use's it to determine how a line, or group of lines is related to the rest of the program.
 4. How do I know which code is inside the loop?
+- If the block of code is indented it belongs to the loop.
 5. What happens to unindented code after a loop?
+- It's executed once after the loop has finish running.
 
 ## Numerical Lists
 
 6. What does `range(1, 5)` produce?
+- It produces numbers from 1 to 4.
 7. Why do I use `range(1, 21)` to print 1 through 20?
+- Because the second parameter is excluded.
 8. What does the third argument in `range(start, stop, step)` do?
+- It defines the increment of the range.
 9. What does `list(range(1, 6))` return?
+- A list with numbers from 1 to 5.
 10. What do `min()`, `max()`, and `sum()` do?
+- `min()` returns the minimum number, `max()` returns the maximum number, `sum()` adds all the numbers in a list or a tuple.
 
 ## List Comprehensions
 
 11. What is a list comprehension?
+- It's an approach to create a list with less lines of code.
 12. When might I use a list comprehension instead of a normal loop?
+- When writing three or four lines of code to generate a list and begins to feel repetitive.
 13. Why should I write the normal loop first if I am confused?
+- Because it takes time to become comfortable and practice.
 
 ## Slices and Copies
 
 14. What does `players[0:3]` return?
+- It returns a list containing items at indexes `0`, `1`, and `2`. The stop index `3` is not included.
 15. What does `players[:3]` return?
+- It returns the first three items in the list, from the beginning up to index `3`, not including index `3`.
 16. What does `players[-3:]` return?
+-  It returns the last three items in the list.
 17. How do I copy a list correctly?
+- You create a new variable and assign it to the list using slicing to copy the items .
 18. What happens if I use `friend_foods = my_foods` instead of `friend_foods = my_foods[:]`?
+- You don't make a new copy but you point the new variable to the same list.
 
 ## Tuples
 
 19. What is a tuple?
+- A list that doesn't change it's values over time.
 20. How is a tuple different from a list?
+- You can't modify the values .
 21. Can I modify one item inside a tuple?
+- No.
 22. Can I reassign a variable to a new tuple?
+- Yes.
 
 ## Style
 
 23. Why does PEP 8 recommend four spaces for indentation?
+- For clear reading.
 24. Why should code be easy to read?
+- Code is read more often than it is written. Clear code is easier to debug, review, refactor, and share with other developers.
 25. What should I check during a code review?
+- I should check indentation, variable names, line length, repeated logic, correct output, unnecessary code, and whether I can explain every line.
 
 ---
 
