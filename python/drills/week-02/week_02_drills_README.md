@@ -31,6 +31,17 @@ week_02_drills_README.md
 
 ---
 
+# Suggested Test File
+Put these tests in test_week_02_drills.py
+
+Recommended filename:
+
+```text
+test_week_02_drills.py
+```
+
+---
+
 # How to Use These Drills
 
 For each drill:
