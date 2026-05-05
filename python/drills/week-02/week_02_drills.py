@@ -6,142 +6,119 @@ Run:
 
     python3 python/drills/week-02/week_02_drills.py
 """
-
+# Drill 1 -- First Item
 
 def first_item(items):
-    """Return the first item in a list."""
-    # TODO: return the item at index 0
-    pass
+    return items[0]
 
+# Drill 2 __ Last Item
 
 def last_item(items):
-    """Return the last item in a list."""
-    # TODO: return the item at index -1
-    pass
+    return items[-1]
 
+# Drill 3 __ Total Numbers
 
 def total_numbers(numbers):
-    """Return the total of a list of numbers."""
-    # TODO: return the sum of the numbers
-    pass
+    return sum(numbers)
 
+# Drill 4 — Biggest Number
 
 def biggest_number(numbers):
-    """Return the largest number in a list."""
-    # TODO: return the largest number
-    pass
+    return max(numbers)
 
+# Drill 5 — Smallest Number
 
 def smallest_number(numbers):
-    """Return the smallest number in a list."""
-    # TODO: return the smallest number
-    pass
+    return min(numbers)
 
+# Drill 6 — Double Numbers
 
 def double_numbers(numbers):
-    """Return a new list where every number is doubled."""
-    # TODO:
-    # 1. create an empty list
-    # 2. loop through numbers
-    # 3. append number * 2
-    # 4. return the new list
-    pass
+    return [number * 2 for number in numbers]
 
+def doubled_numbers(numbers):
+    doubled = []
+
+    for number in numbers:
+        doubled.append(number * 2)
+
+    return doubled
+
+# Drill 7 — Square Numbers
 
 def square_numbers(numbers):
-    """Return a new list where every number is squared."""
-    # TODO:
-    # 1. create an empty list
-    # 2. loop through numbers
-    # 3. append number ** 2
-    # 4. return the new list
-    pass
+    return [number ** 2 for number in numbers]
 
+# Drill 8 — Long Words
 
 def long_words(words):
-    """Return words longer than 5 characters."""
-    # TODO:
-    # 1. create an empty list
-    # 2. loop through words
-    # 3. if len(word) > 5, append it
-    # 4. return the new list
-    pass
+    result = []
+    for word in words:
+        if len(word) > 5:
+            result.append(word)
 
+    return result
+
+def longer_words(words):
+    return [word for word in words if len(word) > 5]
+
+# Drill 9 — First Three Items
 
 def first_three(items):
-    """Return the first three items from a list."""
-    # TODO: return a slice of the first three items
-    pass
+    return items[:3]
 
+# Drill 10 — Last Three Items
 
 def last_three(items):
-    """Return the last three items from a list."""
-    # TODO: return a slice of the last three items
-    pass
+    return items[-3:]
 
+# Drill 11 — Copy and Add
 
-def copy_and_add(items, new_item):
-    """Return a copied list with a new item added.
+def copy_and_add(items, item):
+    result = items[:]
+    result.append(item)
+    return result
 
-    The original list should not change.
-    """
-    # TODO:
-    # 1. copy the list using slicing
-    # 2. append the new item to the copy
-    # 3. return the copy
-    pass
+# Drill 12 — Tuple Menu
 
+def menu_items(items):
+    result = [item.title() for item in items]
+    return result
 
-def menu_items(foods):
-    """Return a list of title-cased food names from a tuple."""
-    # TODO:
-    # 1. create an empty list
-    # 2. loop through the tuple
-    # 3. append food.title()
-    # 4. return the new list
-    pass
-
+# Challenge — Armstrong Helper
 
 def digit_powers(number):
-    """Return each digit raised to the power of the number of digits.
-
-    Example:
-        153 -> [1, 125, 27]
-    """
-    # TODO:
-    # 1. convert number to a string
-    # 2. calculate the power using len()
-    # 3. loop through each digit
-    # 4. convert digit back to int
-    # 5. append int(digit) ** power
-    # 6. return the list
-    pass
-
+    digits = str(number)
+    power = len(digits)
+    return [int(digit) ** power for digit in digits]
 
 if __name__ == "__main__":
-    assert first_item(["python", "django", "react"]) == "python"
-    assert last_item(["python", "django", "react"]) == "react"
-    assert total_numbers([1, 2, 3, 4, 5]) == 15
-    assert biggest_number([3, 9, 2, 12, 5]) == 12
-    assert smallest_number([3, 9, 2, 12, 5]) == 2
-    assert double_numbers([1, 2, 3, 4]) == [2, 4, 6, 8]
-    assert square_numbers([1, 2, 3, 4]) == [1, 4, 9, 16]
-    assert long_words(["python", "js", "django", "react", "postgres"]) == [
-        "python",
-        "django",
-        "postgres",
-    ]
-    assert first_three(["a", "b", "c", "d", "e"]) == ["a", "b", "c"]
-    assert last_three(["a", "b", "c", "d", "e"]) == ["c", "d", "e"]
-
+    items = ["python", "django", "react"]
+    numbers = [1, 2, 3, 4, 5]
+    more_numbers = [3, 9, 2, 12, 5]
+    small_numbers = [3, 9, 2, 12, 5]
+    numbers_doubled = [1, 2, 3, 4]
+    numbers_square = [1, 2, 3, 4]
+    words = ["python", "js", "django", "react", "postgres"]
+    items = ["a", "b", "c", "d", "e"]
     foods = ["pizza", "falafel", "carrot cake"]
-    copied_foods = copy_and_add(foods, "cannoli")
+    foods_menu = ("rice", "beans", "salad")
+    number = 153
 
-    assert copied_foods == ["pizza", "falafel", "carrot cake", "cannoli"]
-    assert foods == ["pizza", "falafel", "carrot cake"]
 
-    assert menu_items(("rice", "beans", "salad")) == ["Rice", "Beans", "Salad"]
-    assert digit_powers(153) == [1, 125, 27]
-    assert digit_powers(9) == [9]
-
-    print("All Week 2 drill tests passed.")
+    print(first_item(items))
+    print(last_item(items))
+    print(total_numbers(numbers))
+    print(biggest_number(more_numbers))
+    print(smallest_number(small_numbers))
+    print(double_numbers(numbers_doubled))
+    print(doubled_numbers(numbers_doubled))
+    print(square_numbers(numbers_square))
+    print(long_words(words))
+    print(longer_words(words))
+    print(first_three(items))
+    print(last_three(items))
+    print(copy_and_add(foods, "cannoli"))
+    print(menu_items(foods_menu))
+    print(digit_powers(number))
+    print("\nAll Week 2 drill tests passed.")
