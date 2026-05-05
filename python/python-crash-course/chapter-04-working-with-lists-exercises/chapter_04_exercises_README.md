@@ -1027,13 +1027,13 @@ Answer these after finishing the chapter.
 1. What does a `for` loop do?
 - Looping is important because it’s one of the most common ways a computer automates repetitive tasks.
 2. What is the loop variable?
-- It's associated with the value of the loop.
+- The loop variable temporarily stores the current item from the list during each pass through the loop.
 3. Why does indentation matter in a loop?
-- Because it use's it to determine how a line, or group of lines is related to the rest of the program.
+- Python uses indentation to decide which lines belong inside the loop.
 4. How do I know which code is inside the loop?
 - If the block of code is indented it belongs to the loop.
 5. What happens to unindented code after a loop?
-- It's executed once after the loop has finish running.
+- It runs once after the loop has finished.
 
 ## Numerical Lists
 
@@ -1051,11 +1051,11 @@ Answer these after finishing the chapter.
 ## List Comprehensions
 
 11. What is a list comprehension?
-- It's an approach to create a list with less lines of code.
+- A list comprehension is a compact way to create a new list from an iterable.
 12. When might I use a list comprehension instead of a normal loop?
 - When writing three or four lines of code to generate a list and begins to feel repetitive.
 13. Why should I write the normal loop first if I am confused?
-- Because it takes time to become comfortable and practice.
+- A normal loop is easier to read step by step, so it helps me understand the logic before making it shorter.
 
 ## Slices and Copies
 
@@ -1066,16 +1066,16 @@ Answer these after finishing the chapter.
 16. What does `players[-3:]` return?
 -  It returns the last three items in the list.
 17. How do I copy a list correctly?
-- You create a new variable and assign it to the list using slicing to copy the items .
+-  Use a full slice: `new_list = original_list[:]`. This creates a separate copy of the list.
 18. What happens if I use `friend_foods = my_foods` instead of `friend_foods = my_foods[:]`?
 - You don't make a new copy but you point the new variable to the same list.
 
 ## Tuples
 
 19. What is a tuple?
-- A list that doesn't change it's values over time.
+- A tuple is an ordered collection of values that cannot be changed item by item.
 20. How is a tuple different from a list?
-- You can't modify the values .
+- A list is mutable, so its items can be changed. A tuple is immutable, so its items cannot be changed.
 21. Can I modify one item inside a tuple?
 - No.
 22. Can I reassign a variable to a new tuple?
@@ -1084,7 +1084,7 @@ Answer these after finishing the chapter.
 ## Style
 
 23. Why does PEP 8 recommend four spaces for indentation?
-- For clear reading.
+- Four spaces make Python code consistent and easier to read.
 24. Why should code be easy to read?
 - Code is read more often than it is written. Clear code is easier to debug, review, refactor, and share with other developers.
 25. What should I check during a code review?
