@@ -655,13 +655,15 @@ if __name__ == "__main__":
 4. What does `items[-3:]` return?
 - Returns the last three items in the list.
 5. What is the difference between `items[:]` and `items`?
-- None both will return all the items in the list.
+- `items[:]` creates a shallow copy of the list. `items` refers to the original list. They may contain the same values, but they are different list objects.
 6. What does `sum(numbers)` return?
-- Returns sum for all items in the list.
+- It returns the total of all numbers.
 7. Does `.append()` return a new list?
-- No it adds a new item in the list.
+- No. `.append()` mutates the original list and returns `None`.
+
 8. Why should most drill functions use `return` instead of `print()`?
-- Because you want to return a result and not just print something.
+- Because `return` gives the result back to the caller, so the value can be tested, reused, or stored.
+
 9. What does `str(153)` return?
 - A string with the numbers.
 10. What does `int("5")` return?
