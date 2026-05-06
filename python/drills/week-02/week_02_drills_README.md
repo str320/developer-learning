@@ -647,15 +647,25 @@ if __name__ == "__main__":
 # Quiz
 
 1. What does `items[0]` return?
+- Returns the first item in the list with index 0.
 2. What does `items[-1]` return?
+- Returns the last item in the list.
 3. What does `items[:3]` return?
+- Returns the first three items in the list with index from 0 to 2.
 4. What does `items[-3:]` return?
+- Returns the last three items in the list.
 5. What is the difference between `items[:]` and `items`?
+- None both will return all the items in the list.
 6. What does `sum(numbers)` return?
+- Returns sum for all items in the list.
 7. Does `.append()` return a new list?
+- No it adds a new item in the list.
 8. Why should most drill functions use `return` instead of `print()`?
+- Because you want to return a result and not just print something.
 9. What does `str(153)` return?
+- A string with the numbers.
 10. What does `int("5")` return?
+- A number integer.
 
 ---
 
@@ -663,16 +673,16 @@ if __name__ == "__main__":
 
 Your Week 2 drills are complete when:
 
-- [ ] every function runs
-- [ ] every function returns a value
-- [ ] no logic function relies on unnecessary `print()`
-- [ ] list-copying drills do not mutate the original list
-- [ ] loop variables are singular and readable
-- [ ] list variables are plural and readable
-- [ ] slicing answers are correct
-- [ ] all `assert` tests pass
-- [ ] you can explain each function line by line
-- [ ] you made at least one cleanup/refactor pass
+- [x] every function runs
+- [x] every function returns a value
+- [x] no logic function relies on unnecessary `print()`
+- [x] list-copying drills do not mutate the original list
+- [x] loop variables are singular and readable
+- [x] list variables are plural and readable
+- [x] slicing answers are correct
+- [x] all `assert` tests pass
+- [x] you can explain each function line by line
+- [x] you made at least one cleanup/refactor pass
 
 ---
 
