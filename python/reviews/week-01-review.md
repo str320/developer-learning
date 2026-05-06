@@ -4,7 +4,7 @@
 
 ## Dates: April 24 – April 28
 
-## Total hours studied: 16
+## Total hours studied: 20
 
 ## What I studied:
 - Python Crash Course Chapter 1
