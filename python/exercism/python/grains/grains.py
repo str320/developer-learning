@@ -12,6 +12,3 @@ def total():
         total_grains = total_grains + square(number)
     return total_grains
 
-
-print(square(2))
-print(total())
