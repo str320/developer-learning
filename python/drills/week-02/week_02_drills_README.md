@@ -27,6 +27,7 @@ Recommended files:
 ```text
 week_02_drills.py
 week_02_drills_README.md
+test_week_02_drills.py
 ```
 
 ---
