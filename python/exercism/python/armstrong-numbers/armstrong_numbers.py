@@ -5,5 +5,5 @@ def is_armstrong_number(number):
     total = sum(armstrong)
     return total == number 
 
-print(is_armstrong_number(153))
+
 
