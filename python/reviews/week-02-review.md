@@ -2,8 +2,8 @@
 
 Week: Review  
 Week: 2  
-Dates: [add dates]  
-Total hours studied: [add total hours]
+Dates: April 30 - May 7  
+Total hours studied: 20
 
 ## What I studied
 
