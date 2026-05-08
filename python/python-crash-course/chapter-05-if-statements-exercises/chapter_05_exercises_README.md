@@ -31,12 +31,6 @@ Recommended files:
 ```text
 README.md
 notes.md
-cars.py
-toppings.py
-voting.py
-amusement_park.py
-magic_number.py
-banned_users.py
 exercise_5_1_conditional_tests.py
 exercise_5_2_more_conditional_tests.py
 exercise_5_3_alien_colors_1.py
