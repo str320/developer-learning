@@ -30,7 +30,7 @@ Recommended files:
 
 ```text
 README.md
-notes.md
+chapter_05_notes.md
 exercise_5_1_conditional_tests.py
 exercise_5_2_more_conditional_tests.py
 exercise_5_3_alien_colors_1.py
