@@ -484,6 +484,18 @@ Boolean Operations
 Comparisons
 ```
 
+### Official Reading Links
+
+Read only these sections from the Python official documentation:
+
+- [Truth Value Testing](https://docs.python.org/3/library/stdtypes.html#truth-value-testing)
+- [Boolean Operations — `and`, `or`, `not`](https://docs.python.org/3/library/stdtypes.html#boolean-operations-and-or-not)
+- [Comparisons](https://docs.python.org/3/library/stdtypes.html#comparisons)
+
+Reference page:
+
+- [Built-in Types](https://docs.python.org/3/library/stdtypes.html)
+
 When reading documentation, ask:
 
 ```text
