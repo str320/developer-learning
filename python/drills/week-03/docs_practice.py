@@ -1,0 +1,15 @@
+print(bool([]))
+print(bool([1, 2, 3,  4]))
+print(bool(""))
+print(bool("python"))
+print(bool(0))
+print(bool(42))
+
+print(True and False)
+print(True and True)
+print(True or False)
+print(not True)
+
+print(5 > 1)
+print(6 == 6)
+print(3 != 6)
