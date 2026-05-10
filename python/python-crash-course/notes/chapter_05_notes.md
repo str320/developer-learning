@@ -526,6 +526,55 @@ print(5 == 5)            # True
 print(5 != 3)            # True
 ```
 
+### Truth Value Testing  
+  
+Truth value testing means Python can evaluate a value as `True` or `False` when the value is used in a condition.  
+  
+Empty values are usually false.
+
+#### Key takeaway  
+  
+Your main rule should be:
+
+```text
+Empty values are usually falsy.  
+Non-empty values are usually truthy.  
+Zero is falsy.  
+Non-zero numbers are truthy.  
+None is falsy
+
+```
+
+### Boolean Operations  
+  
+Boolean operations combine or reverse truth values.  
+  
+`and` returns a truthy result only when both sides are truthy.
+
+`or` returns a truthy result when at least one side is truthy.
+
+`not` reverses the truth value.
+
+#### Key takeaway  
+
+- `and` is stricter because both sides must be true.
+- `or` is more flexible because only one side must be true.
+- `not` flips the condition.
+
+### Comparisons  
+  
+Comparisons check the relationship between two values.  
+  
+They return a boolean result: `True` or `False`.
+
+#### Key takeaway  
+
+- Comparisons return `True` or `False`.
+- Use `==` to compare values.
+- Use `=` to assign values.
+- Use `!=` to check if values are different.
+- Comparison results are often used inside `if` statements.
+
 ---
 
 ## Key Corrections from Chapter 5
