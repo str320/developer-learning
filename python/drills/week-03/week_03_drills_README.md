@@ -71,7 +71,7 @@ pytest python/drills/week-03/test_week_03_drills.py
 
 # Documentation Practice File
 
-Optional file for running tiny official documentation experiments:
+
 
 ```text
 python/drills/week-03/docs_practice.py
