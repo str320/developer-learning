@@ -71,7 +71,7 @@ pytest python/drills/week-03/test_week_03_drills.py
 
 # Documentation Practice File
 
-
+Optional file for running tiny official documentation experiments:
 
 ```text
 python/drills/week-03/docs_practice.py
@@ -836,19 +836,19 @@ def test_user_status():
 
 Your Week 3 drills are complete when:
 
-- [ ] every function runs
-- [ ] every function returns a value
-- [ ] boolean-return functions return comparisons directly
-- [ ] no logic function relies on unnecessary `print()`
-- [ ] comparison operators are correct
-- [ ] `and`, `or`, and `not` are used correctly
-- [ ] `in` and `not in` are used correctly
-- [ ] username checks are case-insensitive when needed
-- [ ] truthy and falsy values are understood
-- [ ] all `assert` tests pass
-- [ ] all `pytest` tests pass
-- [ ] you can explain each function line by line
-- [ ] you made at least one cleanup/refactor pass
+- [x] every function runs
+- [x] every function returns a value
+- [x] boolean-return functions return comparisons directly
+- [x] no logic function relies on unnecessary `print()`
+- [x] comparison operators are correct
+- [x] `and`, `or`, and `not` are used correctly
+- [x] `in` and `not in` are used correctly
+- [x] username checks are case-insensitive when needed
+- [x] truthy and falsy values are understood
+- [x] all `assert` tests pass
+- [x] all `pytest` tests pass
+- [x] you can explain each function line by line
+- [x] you made at least one cleanup/refactor pass
 
 ---
 
