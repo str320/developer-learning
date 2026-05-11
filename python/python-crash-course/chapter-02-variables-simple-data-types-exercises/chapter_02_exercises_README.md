@@ -566,17 +566,17 @@ git push
 
 Mark each exercise when completed.
 
-- [ ] 2-1 Simple Message
-- [ ] 2-2 Simple Messages
-- [ ] 2-3 Personal Message
-- [ ] 2-4 Name Cases
-- [ ] 2-5 Famous Quote
-- [ ] 2-6 Famous Quote 2
-- [ ] 2-7 Stripping Names
-- [ ] 2-8 File Extensions
-- [ ] 2-9 Number Eight
-- [ ] 2-10 Favorite Number
-- [ ] 2-11 Adding Comments
+- [x] 2-1 Simple Message
+- [x] 2-2 Simple Messages
+- [x] 2-3 Personal Message
+- [x] 2-4 Name Cases
+- [x] 2-5 Famous Quote
+- [x] 2-6 Famous Quote 2
+- [x] 2-7 Stripping Names
+- [x] 2-8 File Extensions
+- [x] 2-9 Number Eight
+- [x] 2-10 Favorite Number
+- [x] 2-11 Adding Comments
 
 ---
 
@@ -587,32 +587,48 @@ Answer these after finishing the chapter.
 ## Variables
 
 1. What is a variable?
+- A variable is a name that refers to a value in a program.
 2. What happens when I assign a new value to an existing variable?
+- The variable name now refers to the new value.
 3. Why should variable names be clear?
+- Clear variable names make the purpose of the value easier to understand.
 
 ## Strings
 
 4. What is a string?
+- A string is a sequence of characters, usually text.
 5. What does `title()` do?
+- `title()` returns a new string with the first letter of each word capitalized.
 6. What does `upper()` do?
+- `upper()` returns a new string with all letters uppercase.
 7. What does `lower()` do?
+- `lower()` returns a new string with all letters lowercase.
 8. What is an f-string?
+- An f-string is a string that lets you insert variable values or expressions inside `{}`.
 
 ## Whitespace
 
 9. What does `lstrip()` remove?
+- `lstrip()` removes whitespace from the left side of a string.
 10. What does `rstrip()` remove?
-11. What does `strip()` remove?
+- `rstrip()` removes whitespace from the right side of a string.
+11. What does `strip()` remove?- `strip()` removes whitespace from both the left and right sides of a string.
 
 ## String Suffixes
 
 12. What does `removesuffix(".txt")` return?
+- It returns a new string with `".txt"` removed from the end, if the string ends with `".txt"`.
+
 13. Does `removesuffix()` change the original variable automatically?
+- No. Strings are immutable, so `removesuffix()` returns a new string. To keep the result, assign it to a variable.
+
 
 ## Numbers
 
 14. What is the difference between `8` and `8.0`?
+- `8` is an integer. `8.0` is a float.
 15. Why does `16 / 2` return `8.0`?
+ In Python, `/` always returns a float, even when the result is a whole number.
 
 ## Developer Habits
 
