@@ -36,9 +36,3 @@ def translate(text):
     words = text.split()
     result = [translate_word(word) for word in words]
     return " ".join(result)
-
-
-
-
-
-
