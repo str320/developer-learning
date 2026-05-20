@@ -151,7 +151,7 @@ Use this pattern when you start with partial information and add more data later
 
 ## Starting with an Empty Dictionary
 
-You can start with an empty dictionary and add values later.
+You can start with an empty dictionary and add values later
 
 Example:
 
