@@ -1016,48 +1016,110 @@ Answer these after finishing the chapter.
 ## User Input
 
 1. What does `input()` do?
+- `input()` pauses the program, displays a prompt, waits for the user to type something, and returns what the user typed.
+
 2. What type does `input()` return?
+- `input()` always returns a string.
+
 3. Why does `input()` return a string even when the user types a number?
+- Python receives keyboard input as text. If the program needs numeric behavior, the string must be converted with a function such as `int()` or `float()`.
+
 4. When should I use `int()`?
+- Use `int()` when a value should behave like a whole number, especially before arithmetic, numeric comparisons, or modulo checks.
+
 5. What can go wrong if I call `int()` on `"quit"`?
+- Python raises a `ValueError` because `"quit"` is not valid integer text.
 
 ## Numerical Input
 
 6. Why does `age >= 18` fail if `age` is still a string?
+- It tries to compare a string with an integer. Python does not know how to order those two different types in that comparison.
+
 7. What does `%` do?
+- `%` returns the remainder after division.
+
 8. How do I check whether a number is a multiple of `10`?
+- Check whether the remainder is zero:
+
+```python
+number % 10 == 0
+```
+
 9. How do I check whether a number is even?
+- Check whether the number divides evenly by `2`:
+
+```python
+number % 2 == 0
+```
 
 ## while Loops
 
 10. What does a `while` loop do?
+- A `while` loop repeats a block of code as long as its condition is true.
+
 11. How is a `while` loop different from a `for` loop?
+- A `for` loop is usually used when iterating through a known sequence. A `while` loop is used when repetition depends on a condition that can change.
+
 12. What must usually change inside a `while` loop?
+- Some value involved in the loop condition must usually change, otherwise the loop may never stop.
+
 13. What causes an infinite loop?
+- An infinite loop happens when the loop condition never becomes false and no `break` exits the loop.
+
 14. How do I stop a running infinite loop in the terminal?
+- Press `CTRL-C`.
 
 ## Loop Control
 
 15. What does `break` do?
+- `break` exits the nearest enclosing loop immediately.
+
 16. What does `continue` do?
+- `continue` skips the rest of the current loop iteration and moves to the next iteration.
+
 17. What is an active variable?
+- An active variable is usually a boolean flag, such as `active = True`, that controls whether a loop should keep running.
+
 18. When is `while True` readable?
+- `while True` is readable when the loop has a clear exit path, usually a nearby `break` statement triggered by a specific condition.
+
 19. When should I use a sentinel value like `"quit"`?
+- Use a sentinel value when the user needs a clear input that means “stop the loop.”
 
 ## Lists and Dictionaries with while Loops
 
 20. Why does `while sandwich_orders:` stop when the list is empty?
+- Non-empty lists are truthy and empty lists are falsey. When all items have been removed, the list becomes falsey and the loop stops.
+
 21. What does `.pop()` do?
+- `.pop()` removes and returns an item from a list. Without an index, it removes and returns the last item.
+
 22. What does `.append()` do?
+- `.append()` adds one item to the end of a list and mutates the original list.
+
 23. Why does `while "pastrami" in sandwich_orders:` remove all pastrami orders?
+- The loop keeps running while at least one `"pastrami"` remains. Each iteration removes one, so eventually all matching values are removed.
+
 24. How can a `while` loop fill a dictionary with user input?
+- Each loop iteration can collect a key and value from the user, then assign them into the dictionary:
+
+```python
+responses[name] = answer
+```
 
 ## Style and Review
 
 25. Why should prompts include a space at the end?
+- A trailing space separates the prompt text from the user’s typed input, making the terminal interaction easier to read.
+
 26. Why should output messages be readable?
+- Readable messages make the program easier to use, test, and debug.
+
 27. Why should I test the quit path?
+- The quit path controls how the loop stops. If it is broken, the program may crash, print unwanted output, or loop forever.
+
 28. Which JavaScript habits should I avoid when writing Python input and loops?
+- Avoid braces for blocks, `let`/`const`, JavaScript-style template literals, and relying on truthiness without understanding Python’s rules. Use indentation, f-strings, Python boolean values, and Python loop syntax.
 
 ---
 
