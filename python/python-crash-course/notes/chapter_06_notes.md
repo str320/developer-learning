@@ -1291,310 +1291,72 @@ When reviewing Chapter 6 code, check:
 - A dictionary is a collection of key-value pairs.
 - Use a dictionary when values need meaningful labels.
 
-Example:
-
-```python
-alien = {
-    "color": "green",
-    "points": 5,
-}
-```
-
 2. What is a key-value pair?
 - A key-value pair connects one label to one value.
 - The key is used to look up the value.
 
-Example:
-
-```python
-"color": "green"
-```
-
-Here, `"color"` is the key and `"green"` is the value.
-
 3. How do you access a value by key?
 - Use square brackets with the key name.
 
-Example:
-
-```python
-alien = {
-    "color": "green",
-    "points": 5,
-}
-
-print(alien["color"])
-# green
-```
-
 4. What happens if you use square brackets with a missing key?
 - Python raises a `KeyError`.
-
-Example:
-
-```python
-alien = {
-    "color": "green",
-}
-
-print(alien["points"])
-# KeyError
-```
 
 5. What does `.get()` do?
 - `.get()` safely retrieves a value from a dictionary.
 - If the key exists, it returns the value.
 - If the key is missing, it returns `None` or a fallback value.
 
-Example:
-
-```python
-alien = {
-    "color": "green",
-}
-
-points = alien.get("points", "No points assigned.")
-print(points)
-# No points assigned.
-```
-
 6. What does `.get()` return if the key is missing and no fallback is provided?
 - It returns `None`.
-
-Example:
-
-```python
-alien = {
-    "color": "green",
-}
-
-points = alien.get("points")
-print(points)
-# None
-```
 
 7. How do you add a new key-value pair?
 - Assign a value to a new key.
 
-Example:
-
-```python
-alien = {
-    "color": "green",
-}
-
-alien["points"] = 5
-
-print(alien)
-# {"color": "green", "points": 5}
-```
-
 8. How do you modify an existing value?
 - Assign a new value to an existing key.
 
-Example:
-
-```python
-alien = {
-    "color": "green",
-}
-
-alien["color"] = "yellow"
-
-print(alien)
-# {"color": "yellow"}
-```
-
 9. How do you delete a key-value pair?
 - Use `del` with the key.
-
-Example:
-
-```python
-alien = {
-    "color": "green",
-    "points": 5,
-}
-
-del alien["points"]
-
-print(alien)
-# {"color": "green"}
-```
 
 10. What does `.items()` give you during a loop?
 - `.items()` gives key-value pairs.
 - Use it when the loop needs both the key and the value.
 
-Example:
-
-```python
-favorite_languages = {
-    "jen": "python",
-    "sarah": "c",
-}
-
-for name, language in favorite_languages.items():
-    print(f"{name.title()} likes {language.title()}.")
-```
-
 11. What does `.keys()` give you?
 - `.keys()` gives the dictionary keys.
-
-Example:
-
-```python
-favorite_languages = {
-    "jen": "python",
-    "sarah": "c",
-}
-
-for name in favorite_languages.keys():
-    print(name.title())
-```
-
-Note: looping directly over a dictionary also loops through keys.
-
-```python
-for name in favorite_languages:
-    print(name.title())
-```
+- Looping directly over a dictionary also loops through keys.
 
 12. What does `.values()` give you?
 - `.values()` gives the dictionary values.
-
-Example:
-
-```python
-favorite_languages = {
-    "jen": "python",
-    "sarah": "c",
-}
-
-for language in favorite_languages.values():
-    print(language.title())
-```
 
 13. Why might `.values()` print duplicates?
 - `.values()` returns every value in the dictionary.
 - If two or more keys have the same value, that value appears more than once.
 
-Example:
-
-```python
-favorite_languages = {
-    "jen": "python",
-    "phil": "python",
-}
-
-for language in favorite_languages.values():
-    print(language)
-# python
-# python
-```
-
 14. How does `set()` help with duplicate values?
 - `set()` keeps only unique values.
 - It removes duplicates.
-
-Example:
-
-```python
-favorite_languages = {
-    "jen": "python",
-    "phil": "python",
-    "sarah": "c",
-}
-
-unique_languages = set(favorite_languages.values())
-
-print(unique_languages)
-# {"python", "c"}
-```
 
 15. What does `sorted()` do?
 - `sorted()` returns a new sorted list.
 - It does not permanently change the original collection.
 
-Example:
-
-```python
-favorite_languages = {
-    "jen": "python",
-    "sarah": "c",
-    "edward": "rust",
-}
-
-for name in sorted(favorite_languages.keys()):
-    print(name.title())
-```
-
 16. When should you use a list of dictionaries?
 - Use a list of dictionaries when you have many similar records.
 - Each dictionary represents one item or object.
 
-Example:
-
-```python
-aliens = [
-    {"color": "green", "points": 5},
-    {"color": "yellow", "points": 10},
-    {"color": "red", "points": 15},
-]
-```
-
 17. When should you put a list inside a dictionary?
 - Put a list inside a dictionary when one key needs to store multiple values.
 
-Example:
-
-```python
-pizza = {
-    "crust": "thick",
-    "toppings": ["mushrooms", "extra cheese"],
-}
-```
-
 18. When should you put a dictionary inside a dictionary?
 - Put a dictionary inside a dictionary when one key should point to a full record with several fields.
-
-Example:
-
-```python
-users = {
-    "mcurie": {
-        "first_name": "marie",
-        "last_name": "curie",
-        "location": "paris",
-    },
-}
-```
 
 19. Why should nested structures stay shallow when possible?
 - Deeply nested structures become hard to read, debug, and modify.
 - Shallow structures are easier to understand.
 - Helper variables can make nested data easier to work with.
 
-Example:
-
-```python
-user_info = users["mcurie"]
-full_name = f"{user_info['first_name']} {user_info['last_name']}"
-
-print(full_name.title())
-```
-
 20. Why are dictionaries important for Django and web development?
 - Web applications often pass labeled data around.
 - Dictionaries are useful for representing users, forms, settings, API responses, and page context.
 - In Django, view functions often prepare context data as dictionaries before sending it to templates.
-
-Example:
-
-```python
-context = {
-    "username": "strat",
-    "is_authenticated": True,
-    "favorite_language": "python",
-}
-```
