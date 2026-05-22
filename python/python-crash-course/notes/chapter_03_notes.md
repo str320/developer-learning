@@ -459,177 +459,47 @@ remove()   when you know the value
 - A list is an ordered collection of values stored in one variable.
 - Lists use square brackets, and items are separated by commas.
 
-Example:
-
-```python
-names = ["ada", "eric", "guido"]
-```
-
 2. What index does Python start counting from?
 - Python starts counting list indexes from `0`.
-
-Example:
-
-```python
-names = ["ada", "eric", "guido"]
-
-print(names[0])
-# ada
-```
 
 3. What does `names[-1]` return?
 - `names[-1]` returns the last item in the list.
 
-Example:
-
-```python
-names = ["ada", "eric", "guido"]
-
-print(names[-1])
-# guido
-```
-
 4. How do you modify an item in a list?
 - Assign a new value to a specific index.
-
-Example:
-
-```python
-motorcycles = ["honda", "yamaha", "suzuki"]
-motorcycles[0] = "ducati"
-
-print(motorcycles)
-# ["ducati", "yamaha", "suzuki"]
-```
 
 5. What does `.append()` do?
 - `.append()` adds one item to the end of a list.
 - It mutates the original list and returns `None`.
-
-Example:
-
-```python
-motorcycles = ["honda", "yamaha"]
-motorcycles.append("suzuki")
-
-print(motorcycles)
-# ["honda", "yamaha", "suzuki"]
-```
 
 6. What does `.insert()` do?
 - `.insert()` adds an item at a specific index.
 - The first argument is the index.
 - The second argument is the value to insert.
 
-Example:
-
-```python
-motorcycles = ["honda", "yamaha"]
-motorcycles.insert(0, "ducati")
-
-print(motorcycles)
-# ["ducati", "honda", "yamaha"]
-```
-
 7. When should you use `del`?
 - Use `del` when you know the index of the item you want to remove and you do not need to use the removed value.
-
-Example:
-
-```python
-motorcycles = ["honda", "yamaha", "suzuki"]
-del motorcycles[0]
-
-print(motorcycles)
-# ["yamaha", "suzuki"]
-```
 
 8. When should you use `.pop()`?
 - Use `.pop()` when you want to remove an item and still use the removed value.
 - Without an index, `.pop()` removes and returns the last item.
 
-Example:
-
-```python
-motorcycles = ["honda", "yamaha", "suzuki"]
-popped_motorcycle = motorcycles.pop()
-
-print(popped_motorcycle)
-# suzuki
-```
-
 9. When should you use `.remove()`?
 - Use `.remove()` when you know the value you want to remove, not the index.
 - `.remove()` removes only the first matching value.
 
-Example:
-
-```python
-motorcycles = ["honda", "yamaha", "suzuki"]
-motorcycles.remove("yamaha")
-
-print(motorcycles)
-# ["honda", "suzuki"]
-```
-
 10. What is the difference between `.sort()` and `sorted()`?
 - `.sort()` permanently changes the original list and returns `None`.
 - `sorted()` returns a sorted copy and keeps the original list unchanged.
-
-Example:
-
-```python
-cars = ["bmw", "audi", "toyota"]
-
-print(sorted(cars))
-print(cars)
-
-cars.sort()
-print(cars)
-```
 
 11. What does `.reverse()` do?
 - `.reverse()` reverses the current order of the original list.
 - It mutates the list.
 - It does not sort alphabetically.
 
-Example:
-
-```python
-cars = ["bmw", "audi", "toyota"]
-cars.reverse()
-
-print(cars)
-# ["toyota", "audi", "bmw"]
-```
-
 12. What does `len()` return?
 - `len()` returns the number of items in a list.
 
-Example:
-
-```python
-guests = ["ada", "eric", "guido"]
-
-print(len(guests))
-# 3
-```
-
 13. Which list methods mutate the original list?
-- These common list methods mutate the original list:
-
-```text
-append()
-insert()
-remove()
-pop()
-sort()
-reverse()
-```
-
-- These return useful values without changing the original list, depending on the operation:
-
-```text
-sorted()
-len()
-```
+- Common mutating list methods include `append()`, `insert()`, `remove()`, `pop()`, `sort()`, and `reverse()`.
+- Common operations that return useful values without changing the original list include `sorted()` and `len()`.
