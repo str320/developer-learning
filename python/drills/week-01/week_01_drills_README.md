@@ -272,9 +272,27 @@ def favorite_language(name, language)
 Questions:
 
 1. What error do you get?
+- You get a `SyntaxError`.
+
 2. Which line is wrong?
+- The function definition line is wrong:
+
+```python
+def favorite_language(name, language)
+```
+
 3. What character is missing?
+- The colon `:` is missing at the end of the function definition.
+
 4. Why does Python care about it?
+- Python uses the colon to mark the start of an indented code block. Without the colon, Python does not know that the next indented lines belong to the function.
+
+Corrected code:
+
+```python
+def favorite_language(name, language):
+    return f"{name} likes {language}"
+```
 
 Focus:
 
@@ -380,9 +398,35 @@ Answer these in your own words.
 
 What is the difference between `print()` and `return`?
 
+- `print()` displays a value in the terminal.
+- `return` sends a value back from a function to the caller.
+- Use `print()` when you want the user to see output.
+- Use `return` when you want to reuse, store, or test a value.
+
+Example:
+
+```python
+def show_greeting(name):
+    print(f"Hello, {name}!")
+
+
+def make_greeting(name):
+    return f"Hello, {name}!"
+```
+
 ## Question 2
 
 Why is `EXPECTED_BAKE_TIME` written in uppercase?
+
+- It is written in uppercase because it is a constant.
+- A constant is a value that should not change during the program.
+- Python does not force constants to stay unchanged, but uppercase names tell other developers: “Do not change this value.”
+
+Example:
+
+```python
+EXPECTED_BAKE_TIME = 40
+```
 
 ## Question 3
 
@@ -391,6 +435,16 @@ What does this return?
 ```python
 int("5")
 ```
+
+- It returns the integer `5`.
+
+Explanation:
+
+```python
+int("5")  # 5
+```
+
+The original value is a string. `int()` converts it into an integer.
 
 ## Question 4
 
@@ -401,6 +455,15 @@ def add(a, b)
     return a + b
 ```
 
+- It fails because the function definition is missing a colon `:` at the end of the `def` line.
+
+Correct version:
+
+```python
+def add(a, b):
+    return a + b
+```
+
 ## Question 5
 
 Why does this code fail?
@@ -408,6 +471,17 @@ Why does this code fail?
 ```python
 def add(a, b):
 return a + b
+```
+
+- It fails because `return a + b` is not indented.
+- In Python, indentation defines the function body.
+- The `return` line must be inside the function.
+
+Correct version:
+
+```python
+def add(a, b):
+    return a + b
 ```
 
 ## Question 6
@@ -421,9 +495,31 @@ def double(number):
 double(6)
 ```
 
+- It returns `12`.
+
+Explanation:
+
+```python
+6 * 2 == 12
+```
+
 ## Question 7
 
 What is the Python equivalent of a JavaScript template literal?
+
+- The Python equivalent is an f-string.
+
+JavaScript:
+
+```javascript
+`Hello, ${name}!`
+```
+
+Python:
+
+```python
+f"Hello, {name}!"
+```
 
 ## Question 8
 
@@ -437,6 +533,11 @@ def greet(name):
 
 greet("Ada")
 ```
+
+- `name` is the parameter.
+- `"Ada"` is the argument.
+- A parameter is the variable name in the function definition.
+- An argument is the real value passed into the function call.
 
 ---
 
@@ -518,15 +619,19 @@ After completing these drills:
 5. Send one solution for review.
 6. Refactor after feedback.
 
-# Quiz
-1. Why does f"{age}" not need str(age)?
-- Python automatically converts age to a string.
+# Extra Review Quiz
 
-2. Why is it better to reuse preparation_time_in_minutes()?
--  Don't repeat your self DRY   
+1. Why does `f"{age}"` not need `str(age)`?
+- Inside an f-string, Python automatically converts the value to text for display.
 
-3. What does if __name__ == "__main__": protect you from?
-- When you import functions from this file for tests, the print calls will not automatically run.
+2. Why is it better to reuse `preparation_time_in_minutes()`?
+- Reusing the helper function avoids repeated logic.
+- This follows the DRY principle: Don’t Repeat Yourself.
+- If the preparation rule changes later, you only need to update one function.
 
-4. Why does Python need a colon after def favorite_language(name, language):?
--  Python uses the colon to mark the start of an indented code block.
+3. What does `if __name__ == "__main__":` protect you from?
+- It prevents temporary test code or print calls from running automatically when the file is imported into another file or test file.
+
+4. Why does Python need a colon after `def favorite_language(name, language):`?
+- Python uses the colon to mark the start of an indented code block.
+- The indented block becomes the function body.
