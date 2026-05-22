@@ -588,54 +588,271 @@ Answer these after finishing the chapter.
 
 1. What is a variable?
 - A variable is a name that refers to a value in a program.
+
+Example:
+
+```python
+message = "I am learning Python."
+```
+
+Here, `message` is the variable name and `"I am learning Python."` is the value.
+
 2. What happens when I assign a new value to an existing variable?
 - The variable name now refers to the new value.
+- The old value is replaced for that variable.
+
+Example:
+
+```python
+message = "I am learning Python."
+print(message)
+
+message = "I am learning variables."
+print(message)
+```
+
 3. Why should variable names be clear?
-- Clear variable names make the purpose of the value easier to understand.
+- Clear variable names make code easier to read, debug, and explain.
+- A good variable name describes what the value represents.
+
+Example:
+
+```python
+favorite_number = 8
+```
+
+This is clearer than:
+
+```python
+x = 8
+```
+
+---
 
 ## Strings
 
 4. What is a string?
 - A string is a sequence of characters, usually text.
+- Strings are written inside quotes.
+
+Example:
+
+```python
+name = "Eric"
+message = "Hello, Python!"
+```
+
 5. What does `title()` do?
 - `title()` returns a new string with the first letter of each word capitalized.
+
+Example:
+
+```python
+name = "ada lovelace"
+
+print(name.title())
+# Ada Lovelace
+```
+
 6. What does `upper()` do?
 - `upper()` returns a new string with all letters uppercase.
+
+Example:
+
+```python
+name = "ada"
+
+print(name.upper())
+# ADA
+```
+
 7. What does `lower()` do?
 - `lower()` returns a new string with all letters lowercase.
+
+Example:
+
+```python
+name = "ADA"
+
+print(name.lower())
+# ada
+```
+
 8. What is an f-string?
 - An f-string is a string that lets you insert variable values or expressions inside `{}`.
+- It starts with `f` before the opening quote.
+
+Example:
+
+```python
+name = "Eric"
+
+print(f"Hello, {name}!")
+# Hello, Eric!
+```
+
+---
 
 ## Whitespace
 
 9. What does `lstrip()` remove?
 - `lstrip()` removes whitespace from the left side of a string.
+
+Example:
+
+```python
+name = "   Eric"
+
+print(name.lstrip())
+# Eric
+```
+
 10. What does `rstrip()` remove?
 - `rstrip()` removes whitespace from the right side of a string.
-11. What does `strip()` remove?- `strip()` removes whitespace from both the left and right sides of a string.
+
+Example:
+
+```python
+name = "Eric   "
+
+print(name.rstrip())
+# Eric
+```
+
+11. What does `strip()` remove?
+- `strip()` removes whitespace from both the left and right sides of a string.
+
+Example:
+
+```python
+name = "   Eric   "
+
+print(name.strip())
+# Eric
+```
+
+---
 
 ## String Suffixes
 
 12. What does `removesuffix(".txt")` return?
 - It returns a new string with `".txt"` removed from the end, if the string ends with `".txt"`.
 
-13. Does `removesuffix()` change the original variable automatically?
-- No. Strings are immutable, so `removesuffix()` returns a new string. To keep the result, assign it to a variable.
+Example:
 
+```python
+filename = "python_notes.txt"
+
+print(filename.removesuffix(".txt"))
+# python_notes
+```
+
+13. Does `removesuffix()` change the original variable automatically?
+- No. Strings are immutable, so `removesuffix()` returns a new string.
+- To keep the result, assign it back to a variable.
+
+Example:
+
+```python
+filename = "python_notes.txt"
+filename = filename.removesuffix(".txt")
+
+print(filename)
+# python_notes
+```
+
+---
 
 ## Numbers
 
 14. What is the difference between `8` and `8.0`?
-- `8` is an integer. `8.0` is a float.
+- `8` is an integer.
+- `8.0` is a float.
+- Integers represent whole numbers.
+- Floats represent decimal numbers.
+
+Example:
+
+```python
+print(type(8))
+print(type(8.0))
+```
+
 15. Why does `16 / 2` return `8.0`?
- In Python, `/` always returns a float, even when the result is a whole number.
+- In Python, `/` always performs true division and returns a float.
+- Even if the result is mathematically a whole number, the result of `/` is still a float.
+
+Example:
+
+```python
+print(16 / 2)
+# 8.0
+```
+
+---
 
 ## Developer Habits
 
 16. Did I run every file?
+- Yes. Each exercise file should be run from the terminal to confirm it works.
+
+Example:
+
+```bash
+python3 python/python-crash-course/chapter-02-variables-simple-data-types-exercises/exercise_2_1_simple_message.py
+```
+
 17. Did I use lowercase filenames with underscores?
+- Yes. Python filenames should use lowercase words separated by underscores.
+
+Good:
+
+```text
+simple_message.py
+favorite_number.py
+stripping_names.py
+```
+
+Avoid:
+
+```text
+SimpleMessage.py
+favorite-number.py
+Exercise 2.py
+```
+
 18. Did I commit my completed work?
+- Yes. Completed work should be committed after a meaningful group of exercises.
+
+Example:
+
+```bash
+git add .
+git commit -m "Complete Chapter 2 variable and string exercises"
+git push
+```
+
 19. Can I explain every line I wrote?
+- Yes. You should be able to explain:
+  - what each variable stores
+  - what each string method returns
+  - why an f-string is used
+  - what each `print()` call displays
+  - whether a method changes the original value or returns a new value
+
+Quick review:
+
+```text
+title()        -> returns title case string
+upper()        -> returns uppercase string
+lower()        -> returns lowercase string
+lstrip()       -> removes whitespace from the left
+rstrip()       -> removes whitespace from the right
+strip()        -> removes whitespace from both sides
+removesuffix() -> returns a new string without the suffix
+```
+
+---
 
 ---
 
