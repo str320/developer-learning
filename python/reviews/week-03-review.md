@@ -88,12 +88,44 @@ Main thing that still feels weak:
 
 Questions for review:
 - When should I use `and` instead of `or`?
+    - Use `and` when all conditions must be true.
+    - Use `or` when at least one condition can be true.
+    - A good plain-English test is: “Do I need both things, or either thing?”
+
 - When should I use `is`, and why should I usually avoid it for normal value comparison?
+    - Use `is` for identity checks, especially `is None`.
+    - Use `==` when comparing normal values like strings, numbers, or list contents.
+    - `is` checks whether two names refer to the same object.
+    - `==` checks whether two values are equal.
+
 - Why does `range(1, number)` exclude `number`?
+    - Python ranges include the start value and exclude the stop value.
+    - This matches Python slicing behavior.
+    - `range(1, number)` is useful when you want values before `number`.
+
 - When is a direct boolean return better than an `if/else`?
+    - Use a direct boolean return when the condition already evaluates to `True` or `False`.
+    - This makes the function shorter and clearer.
+    - Use `if/else` when you need different actions, messages, or branches.
+
 - When should I create a helper function?
+    - Create a helper function when a piece of logic has a clear smaller job.
+    - Create one when the same logic is repeated.
+    - Create one when naming the smaller step makes the main function easier to read.
+    - Create one when the smaller piece can be tested independently.
+
 - What is the best way to read a pytest failure?
+    - First identify the failing test name.
+    - Then identify the function call.
+    - Then compare the input, expected result, and actual result.
+    - Ignore unrelated warnings until you confirm they are not causing the failure.
+    - Reduce the problem to the smallest failing case.
+
 - When should I use slicing versus a string method like `.removesuffix()`?
+    - Use slicing when the position or number of characters matters.
+    - Use `.removesuffix()` when you want to remove a known ending from a string.
+    - Prefer the method when it communicates the intention more clearly.
+    - Prefer slicing when the transformation depends on indexes or character ranges.
 
 Next week’s focus:
 - Continue Python Crash Course Chapter 6: dictionaries
