@@ -641,17 +641,210 @@ When reviewing Chapter 5 code, check:
 ## Review Questions
 
 1. What is a boolean?
+- A boolean is a value that is either `True` or `False`.
+- Booleans are used to represent yes/no or on/off conditions.
+
+Example:
+
+```python
+age = 18
+
+print(age >= 18)
+# True
+```
+
 2. What is the difference between `=` and `==`?
+- `=` assigns a value to a variable.
+- `==` compares two values and returns `True` or `False`.
+
+Example:
+
+```python
+car = "subaru"      # assignment
+car == "subaru"     # comparison
+```
+
 3. What does `!=` mean?
+- `!=` means “not equal to.”
+- It returns `True` when two values are different.
+
+Example:
+
+```python
+requested_topping = "mushrooms"
+
+requested_topping != "anchovies"
+# True
+```
+
 4. What does `and` require to return `True`?
+- `and` requires both conditions to be true.
+
+Example:
+
+```python
+age = 25
+
+age >= 18 and age < 65
+# True
+```
+
 5. What does `or` require to return `True`?
+- `or` requires at least one condition to be true.
+
+Example:
+
+```python
+age = 70
+
+age < 18 or age >= 65
+# True
+```
+
 6. What does `not` do?
+- `not` reverses the truth value.
+- `not True` becomes `False`.
+- `not False` becomes `True`.
+
+Example:
+
+```python
+is_active = True
+
+print(not is_active)
+# False
+```
+
 7. What does `item in items` check?
+- It checks whether `item` exists inside `items`.
+
+Example:
+
+```python
+requested_toppings = ["mushrooms", "onions", "pineapple"]
+
+"mushrooms" in requested_toppings
+# True
+```
+
 8. What does `item not in items` check?
+- It checks whether `item` does not exist inside `items`.
+
+Example:
+
+```python
+banned_users = ["andrew", "carolina", "david"]
+user = "marie"
+
+user not in banned_users
+# True
+```
+
 9. Why does `if requested_toppings:` work?
+- Python treats empty and non-empty containers as truthy or falsy.
+- A non-empty list evaluates to `True`.
+- An empty list evaluates to `False`.
+
+Example:
+
+```python
+requested_toppings = ["mushrooms"]
+
+if requested_toppings:
+    print("Adding toppings.")
+```
+
 10. What does an empty list evaluate to?
+- An empty list evaluates to `False`.
+
+Example:
+
+```python
+requested_toppings = []
+
+if requested_toppings:
+    print("Adding toppings.")
+else:
+    print("No toppings requested.")
+```
+
 11. When should I use independent `if` statements?
+- Use independent `if` statements when more than one condition can be true and more than one block may need to run.
+
+Example:
+
+```python
+favorite_fruits = ["banana", "apple", "mango"]
+
+if "banana" in favorite_fruits:
+    print("You really like bananas!")
+
+if "apple" in favorite_fruits:
+    print("You really like apples!")
+```
+
 12. When should I use `if-elif-else`?
+- Use `if-elif-else` when only one branch should run from several possible choices.
+
+Example:
+
+```python
+age = 12
+
+if age < 4:
+    price = 0
+elif age < 18:
+    price = 25
+else:
+    price = 40
+```
+
 13. Why does order matter in an `if-elif-else` chain?
+- Python checks conditions from top to bottom.
+- It runs the first true block and skips the rest.
+- More specific checks should usually come before broader checks.
+
+Example:
+
+```python
+age = 3
+
+if age < 18:
+    print("Child or teenager")
+elif age < 4:
+    print("Toddler")
+```
+
+Here, the toddler branch never runs because `age < 18` is already true.
+
 14. Why use `.lower()` for username checks?
+- `.lower()` makes the comparison case-insensitive.
+- It prevents usernames like `"Admin"` and `"admin"` from being treated as different users.
+
+Example:
+
+```python
+current_users = ["admin", "jaden", "ada"]
+current_users_lower = [user.lower() for user in current_users]
+
+new_user = "Admin"
+
+if new_user.lower() in current_users_lower:
+    print("Username taken.")
+```
+
 15. Which JavaScript habits should I avoid in Python conditionals?
+- Avoid JavaScript boolean operators like `&&`, `||`, and `!`.
+- Avoid lowercase booleans like `true` and `false`.
+- Avoid braces `{}` for code blocks.
+- Avoid JavaScript template literals.
+- Use Python’s `and`, `or`, `not`, `True`, `False`, indentation, and f-strings.
+
+Example:
+
+```python
+age = 25
+
+if age >= 18 and age < 65:
+    print(f"Age: {age}")
+```
