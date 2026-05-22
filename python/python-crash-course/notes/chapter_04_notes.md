@@ -665,129 +665,40 @@ Use these to check understanding.
 1. What does a `for` loop do?
 - A `for` loop repeats a block of code once for each item in a sequence.
 
-Example:
-
-```python
-pizzas = ["margherita", "pepperoni", "vegetarian"]
-
-for pizza in pizzas:
-    print(pizza)
-```
-
 2. What is the loop variable?
 - The loop variable temporarily stores the current item during each pass through the loop.
-
-Example:
-
-```python
-for pizza in pizzas:
-    print(pizza)
-```
-
-Here, `pizza` is the loop variable.
 
 3. How does indentation affect a loop?
 - Indentation tells Python which lines belong inside the loop.
 - Indented lines run once for each item.
 - Unindented lines after the loop run once after the loop is finished.
 
-Example:
-
-```python
-for magician in magicians:
-    print(magician)
-
-print("Thank you, everyone.")
-```
-
 4. What does `range(1, 5)` produce?
 - It produces the numbers `1`, `2`, `3`, and `4`.
 - The stop value `5` is not included.
-
-Example:
-
-```python
-for number in range(1, 5):
-    print(number)
-```
 
 5. Why does `range(1, 21)` print 1 through 20?
 - `range()` excludes the stop value.
 - To include `20`, the stop value must be `21`.
 
-Example:
-
-```python
-for number in range(1, 21):
-    print(number)
-```
-
 6. What does the third argument in `range(start, stop, step)` do?
 - The third argument controls the step size.
 - It tells Python how much to increase the number each time.
-
-Example:
-
-```python
-odd_numbers = list(range(1, 20, 2))
-print(odd_numbers)
-# [1, 3, 5, 7, 9, 11, 13, 15, 17, 19]
-```
 
 7. What does `players[0:3]` return?
 - It returns a new list containing items at indexes `0`, `1`, and `2`.
 - The stop index `3` is not included.
 
-Example:
-
-```python
-players = ["charles", "martina", "michael", "florence", "eli"]
-
-print(players[0:3])
-# ["charles", "martina", "michael"]
-```
-
 8. What does `players[-3:]` return?
 - It returns the last three items in the list.
-
-Example:
-
-```python
-players = ["charles", "martina", "michael", "florence", "eli"]
-
-print(players[-3:])
-# ["michael", "florence", "eli"]
-```
 
 9. How do you copy a list correctly?
 - Use a full slice: `new_list = old_list[:]`.
 - This creates a separate list object.
 
-Example:
-
-```python
-my_foods = ["pizza", "falafel", "carrot cake"]
-friend_foods = my_foods[:]
-
-friend_foods.append("ice cream")
-
-print(my_foods)
-print(friend_foods)
-```
-
 10. What is the difference between a list and a tuple?
 - A list is mutable, so its items can be changed.
 - A tuple is immutable, so its items cannot be changed item by item.
-
-Example:
-
-```python
-foods = ["rice", "beans", "salad"]
-foods[0] = "pasta"
-
-dimensions = (200, 50)
-# dimensions[0] = 250  # TypeError
-```
 
 11. Why should code be easy to read?
 - Code is read more often than it is written.
