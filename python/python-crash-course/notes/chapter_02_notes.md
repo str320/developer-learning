@@ -425,195 +425,49 @@ def bake_time_remaining(elapsed_time):
 - A variable is a name that refers to a value in a program.
 - It lets you store a value so you can use it later.
 
-Example:
-
-```python
-message = "Hello Python world!"
-print(message)
-```
-
 2. Why should variable names be clear?
 - Clear variable names make code easier to read, debug, and explain.
 - A good name describes what the value represents.
-
-Good:
-
-```python
-favorite_number = 7
-first_name = "ada"
-```
-
-Less clear:
-
-```python
-n = 7
-x = "ada"
-```
 
 3. What is a string?
 - A string is text inside quotes.
 - Strings can use single quotes or double quotes.
 
-Examples:
-
-```python
-name = "ada"
-message = 'Hello Python!'
-```
-
 4. What does `.title()` do?
 - `.title()` returns a new string with the first letter of each word capitalized.
-
-Example:
-
-```python
-name = "ada lovelace"
-
-print(name.title())
-# Ada Lovelace
-```
 
 5. Do string methods mutate the original string?
 - No. String methods return a new string.
 - They do not change the original string unless you assign the result back to a variable.
 
-Example:
-
-```python
-name = "ada"
-name.title()
-
-print(name)
-# ada
-```
-
-To save the changed value:
-
-```python
-name = "ada"
-name = name.title()
-
-print(name)
-# Ada
-```
-
 6. What is an f-string?
 - An f-string lets you insert variables or expressions inside a string.
 - It starts with `f` before the opening quote.
 
-Example:
-
-```python
-first_name = "ada"
-last_name = "lovelace"
-
-full_name = f"{first_name} {last_name}"
-
-print(f"Hello, {full_name.title()}!")
-```
-
 7. What does `\n` do?
 - `\n` creates a newline inside a string.
-
-Example:
-
-```python
-print("Languages:\nPython\nJavaScript")
-```
-
-Output:
-
-```text
-Languages:
-Python
-JavaScript
-```
 
 8. What does `strip()` do?
 - `.strip()` removes whitespace from both the left and right sides of a string.
 - It returns a new cleaned string.
-
-Example:
-
-```python
-name = "  ada  "
-
-print(name.strip())
-# ada
-```
-
-Related methods:
-
-```text
-lstrip() -> removes whitespace from the left
-rstrip() -> removes whitespace from the right
-strip()  -> removes whitespace from both sides
-```
+- Related methods: `lstrip()` removes whitespace from the left, and `rstrip()` removes whitespace from the right.
 
 9. What is the difference between an integer and a float?
 - An integer is a whole number.
 - A float is a decimal number.
 
-Example:
-
-```python
-age = 25        # integer
-price = 19.99   # float
-```
-
 10. What does `**` mean?
 - `**` means exponentiation.
 - It raises a number to a power.
-
-Example:
-
-```python
-print(2 ** 3)
-# 8
-```
 
 11. What is a constant?
 - A constant is a value that should not change during the program.
 - Python does not enforce constants, but the convention is to write them in uppercase.
 
-Example:
-
-```python
-EXPECTED_BAKE_TIME = 40
-MAX_CONNECTIONS = 5000
-```
-
 12. When should I use a comment?
 - Use a comment when it helps explain why the code exists or clarifies something that is not obvious.
 - Avoid comments that only repeat what the code already clearly says.
 
-Useful:
-
-```python
-# Convert minutes to hours before showing the study total.
-hours = minutes / 60
-```
-
-Less useful:
-
-```python
-# Print hello.
-print("Hello")
-```
-
 13. What is the difference between `print()` and `return`?
 - `print()` displays a value in the terminal.
 - `return` sends a value back from a function so it can be reused, stored, or tested.
-
-Example:
-
-```python
-def show_message():
-    print("Hello")
-
-def make_message():
-    return "Hello"
-
-message = make_message()
-print(message)
-```
