@@ -103,15 +103,36 @@ I also understand that functions should usually return clean values, not printed
 - Keeping final exercise files clean by removing debug prints
 - Running tests from the correct folder and understanding pytest-style test files
 
-## Questions for review
+## Questions for review:
 
-- When should I use a list comprehension instead of a normal loop?
-- When should I keep both a loop version and a comprehension version for learning?
-- What is the difference between shallow copy and direct assignment for lists?
-- When should I use `print()` while debugging, and when should I remove it?
-- Should Exercism solution files include only the required functions?
-- How should I organize Exercism files inside my GitHub repo?
-- What is the best way to run pytest tests from the project root?
+- When should I use a constant instead of a normal variable?
+    - Use a constant when the value represents a fixed rule or configuration that should not change while the program runs.
+    - Use a normal variable when the value may change during the program.
+
+- When should I write a helper function?
+    - Write a helper function when you notice repeated logic.
+    - Write a helper function when one part of the program has a clear smaller job.
+    - Write a helper function when naming that smaller job would make the main code easier to read.
+
+- Is it better to use `int(amount // denomination)` or `int(amount / denomination)` in Currency Exchange?
+    - It is better to use floor division with `//` when you want whole bills only.
+    - `//` clearly communicates that the decimal part should be discarded.
+    - It matches the problem better because you cannot receive part of a bill.
+
+- How many tests should I write for small practice functions?
+    - For a small practice function, start with two or three tests.
+    - Test one normal case.
+    - Test one different normal case.
+    - Add one edge case if the function has an obvious edge case.
+
+- When should I use `print()` in real code?
+    - Use `print()` when you want to show information to the user.
+    - Use `print()` when you are temporarily debugging or inspecting a value.
+    - Do not use `print()` as the main result of a reusable function unless the function’s purpose is display.
+
+- When should I use `return`?
+    - Use `return` when a function needs to give a value back to the rest of the program.
+    - Use `return` when the result needs to be tested, reused, stored, or passed into another function.
 
 ## Next week’s focus
 
