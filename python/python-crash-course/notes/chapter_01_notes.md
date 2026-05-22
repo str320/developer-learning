@@ -199,10 +199,108 @@ When something breaks, ask:
 ## Review Questions
 
 1. What does a `.py` file contain?
+- A `.py` file contains Python code.
+- It can contain one line or many lines of instructions for Python to run.
+
+Example:
+
+```python
+print("Hello Python world!")
+```
+
 2. What does `print()` do?
+- `print()` displays output in the terminal.
+- It is useful when you want to show a message, inspect a value, or debug while learning.
+
+Example:
+
+```python
+print("Hello Python world!")
+```
+
+Output:
+
+```text
+Hello Python world!
+```
+
 3. How do you run a Python file from the terminal?
+- Use `python3` followed by the file path.
+
+Example:
+
+```bash
+python3 hello_world.py
+```
+
+If the file is inside a folder, include the full relative path:
+
+```bash
+python3 python/python-crash-course/chapter-01-getting-started-exercises/hello_world.py
+```
+
 4. What does a traceback help you find?
+- A traceback helps you find:
+  - what type of error happened
+  - which file caused the error
+  - which line caused the error
+  - sometimes, what Python expected instead
+
 5. Why should Python filenames use lowercase letters and underscores?
+- Lowercase filenames with underscores are easier to read and follow common Python style.
+
+Good:
+
+```text
+hello_world.py
+first_program.py
+```
+
+Avoid:
+
+```text
+HelloWorld.py
+first-program.py
+First Program.py
+```
+
 6. What should you check if Python says a file cannot be found?
+- Check that you are in the correct folder.
+- Check that the file name is spelled correctly.
+- Check that the file path is correct.
+- Use `pwd` to see your current folder.
+- Use `ls` to list files in the current folder.
+
+Useful commands:
+
+```bash
+pwd
+ls
+```
+
 7. What is a string?
+- A string is text inside quotes.
+- Strings can use single quotes or double quotes.
+
+Examples:
+
+```python
+"Hello"
+'Python'
+"Hello Python world!"
+```
+
 8. Why are errors normal when learning programming?
+- Errors are part of the programming process.
+- They help you find what Python could not understand or run.
+- Learning to read errors is a core developer skill, not a failure.
+
+Good debugging questions:
+
+```text
+1. What line caused the error?
+2. What does the error message say?
+3. Did I forget a quote, parenthesis, colon, or indentation?
+4. Am I running the correct file?
+5. Am I in the correct folder?
+```
