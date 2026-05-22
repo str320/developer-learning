@@ -28,5 +28,17 @@ chapter_06_notes.md
 chapter_07_notes.md
 ```
 
+## Basic Workflow
+
+Then commit it with:
+
+```bash
+git add .
+git commit -m "Update Python Crash Course notes index"
+git push
+```
+
+---
+
 Keep exercise instructions in the chapter exercise folder README files.
 Keep broad chapter concept notes in this central `notes/` folder.
