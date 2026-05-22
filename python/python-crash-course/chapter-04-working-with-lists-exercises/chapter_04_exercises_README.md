@@ -1025,70 +1025,242 @@ Answer these after finishing the chapter.
 ## Loops
 
 1. What does a `for` loop do?
-- Looping is important because it’s one of the most common ways a computer automates repetitive tasks.
+- A `for` loop repeats a block of code once for each item in a sequence, such as a list, tuple, string, or range.
+
+Example:
+
+```python
+pizzas = ["margherita", "pepperoni", "vegetarian"]
+
+for pizza in pizzas:
+    print(pizza)
+```
+
 2. What is the loop variable?
-- The loop variable temporarily stores the current item from the list during each pass through the loop.
+- The loop variable temporarily stores the current item during each pass through the loop.
+
+Example:
+
+```python
+for pizza in pizzas:
+    print(pizza)
+```
+
+Here, `pizza` is the loop variable.
+
 3. Why does indentation matter in a loop?
 - Python uses indentation to decide which lines belong inside the loop.
+- Indented lines run once for each item.
+- Unindented lines after the loop run once after the loop is finished.
+
 4. How do I know which code is inside the loop?
-- If the block of code is indented it belongs to the loop.
+- Code inside the loop is indented under the `for` statement.
+
+Example:
+
+```python
+for magician in magicians:
+    print(magician)
+    print("Great trick!")
+```
+
+Both `print()` calls are inside the loop.
+
 5. What happens to unindented code after a loop?
 - It runs once after the loop has finished.
+
+Example:
+
+```python
+for magician in magicians:
+    print(magician)
+
+print("Thank you, everyone.")
+```
+
+The final message prints once, not once per magician.
+
+---
 
 ## Numerical Lists
 
 6. What does `range(1, 5)` produce?
-- It produces numbers from 1 to 4.
+- It produces the numbers `1`, `2`, `3`, and `4`.
+- The stop value `5` is not included.
+
 7. Why do I use `range(1, 21)` to print 1 through 20?
-- Because the second parameter is excluded.
+- Because `range()` excludes the stop value.
+- To include `20`, the stop value must be `21`.
+
+Example:
+
+```python
+for number in range(1, 21):
+    print(number)
+```
+
 8. What does the third argument in `range(start, stop, step)` do?
-- It defines the increment of the range.
+- The third argument controls the step size.
+- It tells Python how much to increase the number each time.
+
+Example:
+
+```python
+list(range(1, 10, 2))
+# [1, 3, 5, 7, 9]
+```
+
 9. What does `list(range(1, 6))` return?
-- A list with numbers from 1 to 5.
+- It returns this list:
+
+```python
+[1, 2, 3, 4, 5]
+```
+
 10. What do `min()`, `max()`, and `sum()` do?
-- `min()` returns the minimum number, `max()` returns the maximum number, `sum()` adds all the numbers in a list or a tuple.
+- `min()` returns the smallest value.
+- `max()` returns the largest value.
+- `sum()` returns the total.
+
+Example:
+
+```python
+numbers = [1, 2, 3, 4, 5]
+
+min(numbers)  # 1
+max(numbers)  # 5
+sum(numbers)  # 15
+```
+
+---
 
 ## List Comprehensions
 
 11. What is a list comprehension?
 - A list comprehension is a compact way to create a new list from an iterable.
+
+Normal loop:
+
+```python
+squares = []
+
+for number in range(1, 6):
+    squares.append(number ** 2)
+```
+
+List comprehension:
+
+```python
+squares = [number ** 2 for number in range(1, 6)]
+```
+
 12. When might I use a list comprehension instead of a normal loop?
-- When writing three or four lines of code to generate a list and begins to feel repetitive.
+- Use a list comprehension when you are creating a list with simple repeated logic.
+- If the logic becomes hard to read, use a normal loop instead.
+
 13. Why should I write the normal loop first if I am confused?
-- A normal loop is easier to read step by step, so it helps me understand the logic before making it shorter.
+- A normal loop is easier to read step by step.
+- It helps you understand the logic before making the code shorter.
+
+---
 
 ## Slices and Copies
 
 14. What does `players[0:3]` return?
-- It returns a list containing items at indexes `0`, `1`, and `2`. The stop index `3` is not included.
+- It returns a new list containing items at indexes `0`, `1`, and `2`.
+- The stop index `3` is not included.
+
 15. What does `players[:3]` return?
-- It returns the first three items in the list, from the beginning up to index `3`, not including index `3`.
+- It returns the first three items in the list.
+- Leaving out the start index means “start from the beginning.”
+
 16. What does `players[-3:]` return?
--  It returns the last three items in the list.
+- It returns the last three items in the list.
+
 17. How do I copy a list correctly?
--  Use a full slice: `new_list = original_list[:]`. This creates a separate copy of the list.
+- Use a full slice:
+
+```python
+friend_foods = my_foods[:]
+```
+
+This creates a separate list object.
+
 18. What happens if I use `friend_foods = my_foods` instead of `friend_foods = my_foods[:]`?
-- You don't make a new copy but you point the new variable to the same list.
+- Both variables point to the same list.
+- Changes through one variable affect the same underlying list.
+
+Example:
+
+```python
+my_foods = ["pizza", "falafel"]
+friend_foods = my_foods
+
+friend_foods.append("ice cream")
+
+print(my_foods)
+# ["pizza", "falafel", "ice cream"]
+```
+
+---
 
 ## Tuples
 
 19. What is a tuple?
 - A tuple is an ordered collection of values that cannot be changed item by item.
+
+Example:
+
+```python
+dimensions = (200, 50)
+```
+
 20. How is a tuple different from a list?
-- A list is mutable, so its items can be changed. A tuple is immutable, so its items cannot be changed.
+- A list is mutable, so its items can be changed.
+- A tuple is immutable, so its items cannot be changed item by item.
+
 21. Can I modify one item inside a tuple?
-- No.
+- No. Trying to change one item inside a tuple raises a `TypeError`.
+
+Example:
+
+```python
+dimensions = (200, 50)
+
+# dimensions[0] = 250  # TypeError
+```
+
 22. Can I reassign a variable to a new tuple?
-- Yes.
+- Yes. You cannot mutate the original tuple item by item, but you can reassign the variable to a new tuple.
+
+Example:
+
+```python
+dimensions = (200, 50)
+dimensions = (400, 100)
+```
+
+---
 
 ## Style
 
 23. Why does PEP 8 recommend four spaces for indentation?
-- Four spaces make Python code consistent and easier to read.
+- Four spaces make Python code consistent and readable.
+- Consistent indentation also makes blocks easier to see.
+
 24. Why should code be easy to read?
-- Code is read more often than it is written. Clear code is easier to debug, review, refactor, and share with other developers.
+- Code is read more often than it is written.
+- Clear code is easier to debug, review, refactor, test, and share.
+
 25. What should I check during a code review?
-- I should check indentation, variable names, line length, repeated logic, correct output, unnecessary code, and whether I can explain every line.
+- Check correctness first.
+- Check indentation.
+- Check variable names.
+- Check line length.
+- Check repeated logic.
+- Check whether return values or print statements are being used appropriately.
+- Check whether the output is readable.
+- Check whether you can explain every line.
 
 ---
 
