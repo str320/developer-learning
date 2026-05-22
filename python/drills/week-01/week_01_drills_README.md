@@ -403,17 +403,6 @@ What is the difference between `print()` and `return`?
 - Use `print()` when you want the user to see output.
 - Use `return` when you want to reuse, store, or test a value.
 
-Example:
-
-```python
-def show_greeting(name):
-    print(f"Hello, {name}!")
-
-
-def make_greeting(name):
-    return f"Hello, {name}!"
-```
-
 ## Question 2
 
 Why is `EXPECTED_BAKE_TIME` written in uppercase?
@@ -422,120 +411,46 @@ Why is `EXPECTED_BAKE_TIME` written in uppercase?
 - A constant is a value that should not change during the program.
 - Python does not force constants to stay unchanged, but uppercase names tell other developers: “Do not change this value.”
 
-Example:
-
-```python
-EXPECTED_BAKE_TIME = 40
-```
-
 ## Question 3
 
-What does this return?
-
-```python
-int("5")
-```
+What does `int("5")` return?
 
 - It returns the integer `5`.
-
-Explanation:
-
-```python
-int("5")  # 5
-```
-
-The original value is a string. `int()` converts it into an integer.
+- The original value is a string. `int()` converts it into an integer.
 
 ## Question 4
 
-Why does this code fail?
-
-```python
-def add(a, b)
-    return a + b
-```
+Why does a function definition fail if the colon is missing after the parameter list?
 
 - It fails because the function definition is missing a colon `:` at the end of the `def` line.
-
-Correct version:
-
-```python
-def add(a, b):
-    return a + b
-```
+- Python uses the colon to mark the start of the function body.
 
 ## Question 5
 
-Why does this code fail?
+Why does a function fail if the `return` line is not indented?
 
-```python
-def add(a, b):
-return a + b
-```
-
-- It fails because `return a + b` is not indented.
+- It fails because the `return` line is not inside the function body.
 - In Python, indentation defines the function body.
-- The `return` line must be inside the function.
-
-Correct version:
-
-```python
-def add(a, b):
-    return a + b
-```
+- The `return` line must be indented under the function definition.
 
 ## Question 6
 
-What does this function return?
-
-```python
-def double(number):
-    return number * 2
-
-double(6)
-```
+What does a function that doubles `6` return?
 
 - It returns `12`.
-
-Explanation:
-
-```python
-6 * 2 == 12
-```
 
 ## Question 7
 
 What is the Python equivalent of a JavaScript template literal?
 
 - The Python equivalent is an f-string.
-
-JavaScript:
-
-```javascript
-`Hello, ${name}!`
-```
-
-Python:
-
-```python
-f"Hello, {name}!"
-```
+- JavaScript uses template literals.
+- Python uses f-strings.
 
 ## Question 8
 
 What is the difference between a parameter and an argument?
 
-Example:
-
-```python
-def greet(name):
-    return f"Hello, {name}!"
-
-greet("Ada")
-```
-
-- `name` is the parameter.
-- `"Ada"` is the argument.
 - A parameter is the variable name in the function definition.
 - An argument is the real value passed into the function call.
 
@@ -632,6 +547,6 @@ After completing these drills:
 3. What does `if __name__ == "__main__":` protect you from?
 - It prevents temporary test code or print calls from running automatically when the file is imported into another file or test file.
 
-4. Why does Python need a colon after `def favorite_language(name, language):`?
+4. Why does Python need a colon after a function definition?
 - Python uses the colon to mark the start of an indented code block.
 - The indented block becomes the function body.
