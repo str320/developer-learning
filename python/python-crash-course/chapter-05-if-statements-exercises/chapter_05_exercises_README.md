@@ -1305,4 +1305,4 @@ Answer these after finishing the chapter.
 - `not in` checks whether an item is not in a list.
 - Empty lists evaluate to `False`.
 - Non-empty lists evaluate to `True`.
-- `.lower()` helps make case-insensitive comparisons.
+- `.lower()` helps make case-insensitive comparisons
