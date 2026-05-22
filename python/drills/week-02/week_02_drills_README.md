@@ -666,9 +666,10 @@ if __name__ == "__main__":
 - Because `return` gives the result back to the caller, so the value can be tested, reused, or stored.
 
 9. What does `str(153)` return?
-- A string with the numbers.
+- It returns the string `"153"`.
+
 10. What does `int("5")` return?
-- A number integer.
+- It returns the integer `5`.
 
 ---
 
