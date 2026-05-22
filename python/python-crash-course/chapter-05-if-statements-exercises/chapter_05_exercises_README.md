@@ -1160,48 +1160,330 @@ Answer these after finishing the chapter.
 ## Booleans and Comparisons
 
 1. What is a boolean?
+- A boolean is a value that represents one of two possible states: `True` or `False`.
+
 2. What values do `True` and `False` represent?
+- `True` represents that a condition is correct or active.
+- `False` represents that a condition is incorrect or inactive.
+
+Example:
+
+```python
+is_active = True
+is_finished = False
+```
+
 3. What is the difference between `=` and `==`?
+- `=` assigns a value to a variable.
+- `==` compares two values and returns `True` or `False`.
+
+Example:
+
+```python
+age = 18        # assignment
+age == 18       # comparison
+```
+
 4. What does `!=` mean?
+- `!=` means “not equal to.”
+- It returns `True` when two values are different.
+
+Example:
+
+```python
+car = "bmw"
+
+car != "audi"  # True
+```
+
 5. What does `age >= 18` return?
+- It returns a boolean: either `True` or `False`.
+
+Example:
+
+```python
+age = 20
+
+age >= 18  # True
+```
+
+---
 
 ## if Statements
 
 6. What does an `if` statement do?
+- An `if` statement runs a block of code only when its condition is `True`.
+
+Example:
+
+```python
+age = 19
+
+if age >= 18:
+    print("You are old enough to vote.")
+```
+
 7. Why does indentation matter in an `if` statement?
+- Indentation tells Python which lines belong inside the `if` block.
+- Only the indented lines run when the condition is `True`.
+
+Example:
+
+```python
+if age >= 18:
+    print("You are old enough to vote.")
+    print("Have you registered yet?")
+```
+
 8. What happens if the condition is false?
+- If the condition is false, Python skips the indented block.
+- If there is an `else` block, Python runs the `else` block instead.
+
+Example:
+
+```python
+age = 16
+
+if age >= 18:
+    print("You can vote.")
+else:
+    print("You are too young to vote.")
+```
+
+---
 
 ## if-else and if-elif-else
 
 9. When should I use `if-else`?
+- Use `if-else` when there are two possible paths.
+
+Example:
+
+```python
+if age >= 18:
+    print("You can vote.")
+else:
+    print("You cannot vote yet.")
+```
+
 10. When should I use `if-elif-else`?
+- Use `if-elif-else` when there are more than two possible outcomes.
+
+Example:
+
+```python
+if age < 4:
+    price = 0
+elif age < 18:
+    price = 25
+else:
+    price = 40
+```
+
 11. Why does order matter in an `if-elif-else` chain?
+- Python checks conditions from top to bottom.
+- It runs the first block whose condition is `True` and skips the rest.
+- More specific or lower-range conditions often need to come before broader ones.
+
+Example:
+
+```python
+if age < 4:
+    price = 0
+elif age < 18:
+    price = 25
+else:
+    price = 40
+```
+
 12. Why might I omit the final `else` block?
+- You might omit `else` when every condition should be explicit.
+- This can make the code clearer and help avoid catching unexpected cases too broadly.
+
+Example:
+
+```python
+if alien_color == "green":
+    points = 5
+elif alien_color == "yellow":
+    points = 10
+elif alien_color == "red":
+    points = 15
+```
+
+---
 
 ## Logical Operators
 
 13. What does `and` require to return `True`?
+- `and` requires both sides to be true.
+
+Example:
+
+```python
+age = 25
+
+age >= 18 and age < 65  # True
+```
+
 14. What does `or` require to return `True`?
+- `or` requires at least one side to be true.
+
+Example:
+
+```python
+age = 70
+
+age < 18 or age >= 65  # True
+```
+
 15. What does `not` do?
+- `not` reverses a truth value.
+- `not True` becomes `False`.
+- `not False` becomes `True`.
+
+Example:
+
+```python
+is_active = False
+
+not is_active  # True
+```
+
+---
 
 ## Lists and Conditions
 
 16. What does `item in items` check?
+- It checks whether `item` exists inside `items`.
+
+Example:
+
+```python
+favorite_fruits = ["banana", "apple", "mango"]
+
+"banana" in favorite_fruits  # True
+```
+
 17. What does `item not in items` check?
+- It checks whether `item` does not exist inside `items`.
+
+Example:
+
+```python
+favorite_fruits = ["banana", "apple", "mango"]
+
+"kiwi" not in favorite_fruits  # True
+```
+
 18. Why does `if requested_toppings:` work?
+- Python treats a non-empty list as `True`.
+- Python treats an empty list as `False`.
+
+Example:
+
+```python
+requested_toppings = ["mushrooms"]
+
+if requested_toppings:
+    print("Adding toppings.")
+```
+
 19. What does an empty list evaluate to in a conditional?
+- An empty list evaluates to `False`.
+
+Example:
+
+```python
+requested_toppings = []
+
+if requested_toppings:
+    print("Adding toppings.")
+else:
+    print("No toppings requested.")
+```
+
 20. Why did Exercise 5-7 use independent `if` statements instead of `elif`?
+- Independent `if` statements are all checked.
+- This is needed because more than one favorite fruit can be in the list.
+- An `if-elif-else` chain would stop after the first true condition.
+
+Example:
+
+```python
+if "banana" in favorite_fruits:
+    print("You really like bananas!")
+
+if "apple" in favorite_fruits:
+    print("You really like apples!")
+```
+
+---
 
 ## Case-Insensitive Checks
 
 21. Why do we use `.lower()` when checking usernames?
+- `.lower()` makes the comparison case-insensitive.
+- It helps treat `"Admin"`, `"ADMIN"`, and `"admin"` as the same username.
+
+Example:
+
+```python
+username = "Admin"
+
+username.lower() == "admin"  # True
+```
+
 22. Why should we create a lowercase copy of `current_users`?
+- A lowercase copy lets us compare all usernames in the same format.
+- It avoids missing duplicates because of capitalization differences.
+
+Example:
+
+```python
+current_users = ["admin", "Jaden", "Ada"]
+current_users_lower = [user.lower() for user in current_users]
+```
+
 23. What could go wrong if we compare usernames without normalizing case?
+- The program might allow duplicate usernames with different capitalization.
+
+Example:
+
+```python
+"Admin" == "admin"  # False
+```
+
+Without normalization, `"Admin"` and `"admin"` could be treated as different users.
+
+---
 
 ## Style and Review
 
 24. What should I check when reviewing conditional tests?
+- Check that comparison operators are correct.
+- Check that `=` and `==` are not confused.
+- Check indentation.
+- Check spaces around operators.
+- Check that condition order makes sense.
+- Check whether independent `if` statements or an `if-elif-else` chain is the better choice.
+- Check that output messages are readable.
+
 25. Which JavaScript habits should I avoid in Python conditionals?
+- Avoid JavaScript boolean operators like `&&`, `||`, and `!`.
+- Avoid braces `{}` for code blocks.
+- Avoid lowercase booleans like `true` and `false`.
+- Avoid JavaScript template literals.
+- Use Python’s `and`, `or`, `not`, indentation, `True`, `False`, and f-strings.
+
+Example:
+
+```python
+age = 25
+
+if age >= 18 and age < 65:
+    print(f"Age: {age}")
+```
 
 ---
 
