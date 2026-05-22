@@ -1027,113 +1027,30 @@ Mark each exercise when completed.
 1. What does `input()` do?
 - `input()` pauses the program, shows a prompt, waits for the user to type something, and returns what the user typed.
 
-Example:
-
-```python
-name = input("Please enter your name: ")
-print(f"Hello, {name}!")
-```
-
 2. What type does `input()` return?
 - `input()` always returns a string.
-
-Example:
-
-```python
-age = input("How old are you? ")
-
-print(type(age))
-# <class 'str'>
-```
 
 3. Why do you need `int()` before comparing numeric user input?
 - User input starts as a string.
 - Numeric comparisons require a number, not text.
 - `int()` converts suitable string input into an integer.
 
-Example:
-
-```python
-age = input("How old are you? ")
-age = int(age)
-
-if age >= 18:
-    print("You are old enough to vote.")
-```
-
 4. What does the modulo operator `%` return?
 - `%` returns the remainder after division.
-
-Example:
-
-```python
-print(25 % 10)
-# 5
-```
 
 5. How do you check whether a number is a multiple of 10?
 - Check whether dividing by `10` leaves a remainder of `0`.
 
-Example:
-
-```python
-number = 20
-
-if number % 10 == 0:
-    print("This is a multiple of 10.")
-```
-
 6. What is a `while` loop?
 - A `while` loop repeats a block of code as long as its condition is `True`.
-
-Example:
-
-```python
-current_number = 1
-
-while current_number <= 5:
-    print(current_number)
-    current_number += 1
-```
 
 7. How is a `while` loop different from a `for` loop?
 - A `for` loop is usually used when you know the sequence you want to loop through.
 - A `while` loop is used when the loop should continue until a condition changes.
 
-Example:
-
-```python
-for name in names:
-    print(name)
-```
-
-```python
-while active:
-    message = input("Enter a message: ")
-```
-
 8. What can cause an infinite loop?
 - An infinite loop happens when the loop condition never becomes `False`.
-- This often happens when the loop variable is not updated.
-
-Incorrect:
-
-```python
-current_number = 1
-
-while current_number <= 5:
-    print(current_number)
-```
-
-Correct:
-
-```python
-current_number = 1
-
-while current_number <= 5:
-    print(current_number)
-    current_number += 1
-```
+- This often happens when the loop variable is not updated or no `break` condition is reached.
 
 9. How do you stop a program that is stuck in an infinite loop?
 - Press `CTRL-C` in the terminal.
@@ -1141,90 +1058,21 @@ while current_number <= 5:
 10. What is an active flag?
 - An active flag is a boolean variable that controls whether a loop should keep running.
 
-Example:
-
-```python
-active = True
-
-while active:
-    message = input("Enter 'quit' to stop: ")
-
-    if message == "quit":
-        active = False
-```
-
 11. When should you use `break`?
 - Use `break` when you want to exit a loop immediately.
 - It is useful when the stopping condition is checked inside the loop.
 
-Example:
-
-```python
-while True:
-    city = input("Enter a city or 'quit': ")
-
-    if city == "quit":
-        break
-
-    print(city)
-```
-
 12. When should you use `continue`?
 - Use `continue` when you want to skip the rest of the current loop cycle and move to the next cycle.
-
-Example:
-
-```python
-current_number = 0
-
-while current_number < 10:
-    current_number += 1
-
-    if current_number % 2 == 0:
-        continue
-
-    print(current_number)
-```
 
 13. Why should you be careful using `continue` before updating a loop variable?
 - `continue` skips the rest of the current loop cycle.
 - If the loop variable update comes after `continue`, Python may skip the update and create an infinite loop.
 
-Incorrect:
-
-```python
-current_number = 0
-
-while current_number < 10:
-    if current_number % 2 == 0:
-        continue
-
-    current_number += 1
-```
-
-Better:
-
-```python
-current_number = 0
-
-while current_number < 10:
-    current_number += 1
-
-    if current_number % 2 == 0:
-        continue
-```
-
 14. What does `while unconfirmed_users:` mean?
 - It means “keep looping while the list has at least one item.”
 - A non-empty list evaluates to `True`.
 - An empty list evaluates to `False`.
-
-Example:
-
-```python
-while unconfirmed_users:
-    current_user = unconfirmed_users.pop()
-```
 
 15. Why does an empty list stop the loop?
 - In Python, an empty list is falsy.
@@ -1234,67 +1082,18 @@ while unconfirmed_users:
 - `.remove()` removes only the first matching value.
 - A `while` loop can keep removing the value until no matches remain.
 
-Example:
-
-```python
-pets = ["cat", "dog", "cat", "rabbit"]
-
-while "cat" in pets:
-    pets.remove("cat")
-
-print(pets)
-# ["dog", "rabbit"]
-```
-
 17. How do you move an item from one list to another?
 - Use `.pop()` to remove and return an item from one list.
 - Use `.append()` to add that item to another list.
-
-Example:
-
-```python
-unconfirmed_users = ["alice", "brian"]
-confirmed_users = []
-
-current_user = unconfirmed_users.pop()
-confirmed_users.append(current_user)
-```
 
 18. How do you fill a dictionary with user input?
 - Start with an empty dictionary.
 - Use a loop to collect a key and value.
 - Store each response with dictionary assignment.
 
-Example:
-
-```python
-responses = {}
-polling_active = True
-
-while polling_active:
-    name = input("What is your name? ")
-    place = input("Where would you like to travel? ")
-
-    responses[name] = place
-
-    repeat = input("Add another response? (yes/no) ")
-
-    if repeat.lower() == "no":
-        polling_active = False
-```
-
 19. Why might `.lower()` be useful with yes/no answers?
 - `.lower()` makes the check case-insensitive.
 - It lets `"No"`, `"NO"`, and `"no"` be treated the same.
-
-Example:
-
-```python
-repeat = input("Continue? (yes/no) ")
-
-if repeat.lower() == "no":
-    active = False
-```
 
 20. Which Chapter 7 patterns will be useful later in Django forms or user workflows?
 - Collecting user input.
@@ -1305,15 +1104,6 @@ if repeat.lower() == "no":
 - Storing responses in dictionaries.
 - Processing lists of submitted items.
 - Normalizing user input with `.lower()`.
-
-Example idea:
-
-```python
-form_data = {
-    "username": username,
-    "age": age,
-}
-```
 
 ---
 
