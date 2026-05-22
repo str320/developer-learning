@@ -1027,26 +1027,8 @@ Answer these after finishing the chapter.
 1. What does a `for` loop do?
 - A `for` loop repeats a block of code once for each item in a sequence, such as a list, tuple, string, or range.
 
-Example:
-
-```python
-pizzas = ["margherita", "pepperoni", "vegetarian"]
-
-for pizza in pizzas:
-    print(pizza)
-```
-
 2. What is the loop variable?
 - The loop variable temporarily stores the current item during each pass through the loop.
-
-Example:
-
-```python
-for pizza in pizzas:
-    print(pizza)
-```
-
-Here, `pizza` is the loop variable.
 
 3. Why does indentation matter in a loop?
 - Python uses indentation to decide which lines belong inside the loop.
@@ -1055,30 +1037,11 @@ Here, `pizza` is the loop variable.
 
 4. How do I know which code is inside the loop?
 - Code inside the loop is indented under the `for` statement.
-
-Example:
-
-```python
-for magician in magicians:
-    print(magician)
-    print("Great trick!")
-```
-
-Both `print()` calls are inside the loop.
+- Every indented line after the loop header belongs to the loop block.
 
 5. What happens to unindented code after a loop?
 - It runs once after the loop has finished.
-
-Example:
-
-```python
-for magician in magicians:
-    print(magician)
-
-print("Thank you, everyone.")
-```
-
-The final message prints once, not once per magician.
+- It does not repeat for every item.
 
 ---
 
@@ -1092,45 +1055,18 @@ The final message prints once, not once per magician.
 - Because `range()` excludes the stop value.
 - To include `20`, the stop value must be `21`.
 
-Example:
-
-```python
-for number in range(1, 21):
-    print(number)
-```
-
 8. What does the third argument in `range(start, stop, step)` do?
 - The third argument controls the step size.
 - It tells Python how much to increase the number each time.
 
-Example:
-
-```python
-list(range(1, 10, 2))
-# [1, 3, 5, 7, 9]
-```
-
 9. What does `list(range(1, 6))` return?
-- It returns this list:
-
-```python
-[1, 2, 3, 4, 5]
-```
+- It returns a list containing the numbers `1` through `5`.
+- The start value is included and the stop value is excluded.
 
 10. What do `min()`, `max()`, and `sum()` do?
 - `min()` returns the smallest value.
 - `max()` returns the largest value.
 - `sum()` returns the total.
-
-Example:
-
-```python
-numbers = [1, 2, 3, 4, 5]
-
-min(numbers)  # 1
-max(numbers)  # 5
-sum(numbers)  # 15
-```
 
 ---
 
@@ -1138,21 +1074,7 @@ sum(numbers)  # 15
 
 11. What is a list comprehension?
 - A list comprehension is a compact way to create a new list from an iterable.
-
-Normal loop:
-
-```python
-squares = []
-
-for number in range(1, 6):
-    squares.append(number ** 2)
-```
-
-List comprehension:
-
-```python
-squares = [number ** 2 for number in range(1, 6)]
-```
+- It is often used when a normal loop builds a list with simple repeated logic.
 
 12. When might I use a list comprehension instead of a normal loop?
 - Use a list comprehension when you are creating a list with simple repeated logic.
@@ -1178,29 +1100,12 @@ squares = [number ** 2 for number in range(1, 6)]
 - It returns the last three items in the list.
 
 17. How do I copy a list correctly?
-- Use a full slice:
+- Use a full slice, written as `[:]`.
+- This creates a separate list object.
 
-```python
-friend_foods = my_foods[:]
-```
-
-This creates a separate list object.
-
-18. What happens if I use `friend_foods = my_foods` instead of `friend_foods = my_foods[:]`?
+18. What happens if I use `friend_foods = my_foods` instead of a full-slice copy?
 - Both variables point to the same list.
 - Changes through one variable affect the same underlying list.
-
-Example:
-
-```python
-my_foods = ["pizza", "falafel"]
-friend_foods = my_foods
-
-friend_foods.append("ice cream")
-
-print(my_foods)
-# ["pizza", "falafel", "ice cream"]
-```
 
 ---
 
@@ -1209,12 +1114,6 @@ print(my_foods)
 19. What is a tuple?
 - A tuple is an ordered collection of values that cannot be changed item by item.
 
-Example:
-
-```python
-dimensions = (200, 50)
-```
-
 20. How is a tuple different from a list?
 - A list is mutable, so its items can be changed.
 - A tuple is immutable, so its items cannot be changed item by item.
@@ -1222,23 +1121,8 @@ dimensions = (200, 50)
 21. Can I modify one item inside a tuple?
 - No. Trying to change one item inside a tuple raises a `TypeError`.
 
-Example:
-
-```python
-dimensions = (200, 50)
-
-# dimensions[0] = 250  # TypeError
-```
-
 22. Can I reassign a variable to a new tuple?
 - Yes. You cannot mutate the original tuple item by item, but you can reassign the variable to a new tuple.
-
-Example:
-
-```python
-dimensions = (200, 50)
-dimensions = (400, 100)
-```
 
 ---
 
