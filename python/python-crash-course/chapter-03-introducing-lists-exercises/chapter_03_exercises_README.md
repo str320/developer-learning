@@ -635,46 +635,16 @@ Answer these after finishing the chapter.
 - A list is an ordered collection of items stored in one variable.
 - Lists can store strings, numbers, booleans, or other objects.
 
-Example:
-
-```python
-languages = ["python", "javascript", "sql"]
-```
-
 2. What does index `0` mean?
 - Index `0` means the first item in a list.
 - Python list indexes start at `0`, not `1`.
 
-Example:
-
-```python
-languages = ["python", "javascript", "sql"]
-
-languages[0]  # "python"
-```
-
 3. What does index `-1` mean?
 - Index `-1` means the last item in a list.
-
-Example:
-
-```python
-languages = ["python", "javascript", "sql"]
-
-languages[-1]  # "sql"
-```
 
 4. What happens if I access an index that does not exist?
 - Python raises an `IndexError`.
 - This means the list index is out of range.
-
-Example:
-
-```python
-languages = ["python", "javascript", "sql"]
-
-# languages[10]  # IndexError
-```
 
 ---
 
@@ -684,44 +654,13 @@ languages = ["python", "javascript", "sql"]
 - `append()` adds a new item to the end of the list.
 - `insert()` adds a new item at a specific index.
 
-Example:
-
-```python
-languages = ["python", "javascript"]
-
-languages.append("sql")
-languages.insert(1, "ruby")
-
-print(languages)
-# ["python", "ruby", "javascript", "sql"]
-```
-
 6. What is the difference between `pop()` and `del`?
 - `pop()` removes an item and returns it, so you can still use the removed value.
 - `del` removes an item without returning it.
 
-Example:
-
-```python
-languages = ["python", "javascript", "sql"]
-
-removed_language = languages.pop()
-print(removed_language)  # "sql"
-
-del languages[0]
-```
-
 7. When should I use `remove()`?
 - Use `remove()` when you know the value you want to remove, not its index.
 - `remove()` deletes the first matching value.
-
-Example:
-
-```python
-languages = ["python", "javascript", "sql"]
-
-languages.remove("javascript")
-```
 
 ---
 
@@ -731,42 +670,12 @@ languages.remove("javascript")
 - `sort()` permanently changes the original list.
 - `sorted()` returns a sorted version without changing the original list.
 
-Example:
-
-```python
-places = ["japan", "canada", "iceland"]
-
-print(sorted(places))
-print(places)  # original list is unchanged
-
-places.sort()
-print(places)  # original list is now changed
-```
-
 9. What does `reverse()` do?
 - `reverse()` permanently reverses the current order of the list.
 - It does not sort alphabetically. It only reverses the existing order.
 
-Example:
-
-```python
-places = ["japan", "canada", "iceland"]
-
-places.reverse()
-print(places)
-# ["iceland", "canada", "japan"]
-```
-
 10. What does `len()` return?
 - `len()` returns the number of items in the list.
-
-Example:
-
-```python
-languages = ["python", "javascript", "sql"]
-
-len(languages)  # 3
-```
 
 ---
 
@@ -775,22 +684,8 @@ len(languages)  # 3
 11. Did I run every file?
 - Yes, each exercise file should be run from the terminal to confirm it works.
 
-Example:
-
-```bash
-python3 python/python-crash-course/chapter-03-introducing-lists-exercises/exercise_3_1_names.py
-```
-
 12. Did I commit my completed work?
 - Yes, completed work should be committed after a meaningful group of exercises.
-
-Example:
-
-```bash
-git add .
-git commit -m "Complete Chapter 3 list exercises"
-git push
-```
 
 13. Can I explain every list method I used?
 - You should be able to explain what each method does, whether it changes the original list, and whether it returns a useful value.
