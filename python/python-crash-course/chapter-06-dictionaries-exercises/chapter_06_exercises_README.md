@@ -1235,7 +1235,8 @@ Answer these after finishing the chapter.
 ## Dictionaries
 
 1. What is a dictionary?
-- A dictionary is a collection of key-value pairs. Each key points to a related value.
+- A dictionary is a collection of key-value pairs.
+- Each key points to a related value.
 
 2. What is a key?
 - A key is the label used to access a value in a dictionary.
@@ -1247,26 +1248,9 @@ Answer these after finishing the chapter.
 - A list stores ordered items by position, accessed with indexes.
 - A dictionary stores labeled data by key, accessed with key names.
 
-Example:
-
-```python
-languages = ["python", "javascript", "sql"]
-person = {"first_name": "ada", "age": 36}
-```
-
 5. When should I use a dictionary instead of a list?
 - Use a dictionary when each piece of data needs a meaningful label.
-
-Example:
-
-```python
-person = {
-    "first_name": "ada",
-    "last_name": "lovelace",
-    "age": 36,
-    "city": "london",
-}
-```
+- Dictionaries are useful for storing structured information about one thing.
 
 ---
 
@@ -1275,53 +1259,20 @@ person = {
 6. How do I access a value by key?
 - Use square brackets with the key.
 
-```python
-person["first_name"]
-```
-
 7. What happens if I use square brackets with a missing key?
 - Python raises a `KeyError`.
-
-Example:
-
-```python
-person = {"first_name": "ada"}
-
-print(person["age"])  # KeyError
-```
 
 8. How does `.get()` help avoid `KeyError`?
 - `.get()` returns `None` or a default value when the key does not exist instead of raising `KeyError`.
 
-Example:
-
-```python
-person = {"first_name": "ada"}
-
-print(person.get("age"))
-print(person.get("age", "Age not provided."))
-```
-
 9. How do I add a new key-value pair?
 - Assign a value to a new key.
-
-```python
-person["city"] = "athens"
-```
 
 10. How do I update an existing value?
 - Assign a new value to an existing key.
 
-```python
-person["city"] = "london"
-```
-
 11. How do I delete a key-value pair?
 - Use `del` with the key.
-
-```python
-del person["city"]
-```
 
 ---
 
@@ -1331,45 +1282,18 @@ del person["city"]
 - `.items()` gives key-value pairs.
 - Use it when each loop needs both the key and the value.
 
-```python
-for key, value in person.items():
-    print(key, value)
-```
-
 13. What does `.keys()` give me?
 - `.keys()` gives the dictionary keys.
 
-```python
-for key in person.keys():
-    print(key)
-```
-
 14. What does `.values()` give me?
 - `.values()` gives the dictionary values.
-
-```python
-for value in person.values():
-    print(value)
-```
 
 15. When should I use `.items()` instead of `.keys()`?
 - Use `.items()` when the loop needs both the key and the value.
 - Use `.keys()` when the loop only needs keys.
 
-Example:
-
-```python
-for river, country in rivers.items():
-    print(f"The {river.title()} runs through {country.title()}.")
-```
-
 16. What does `for key in dictionary:` loop through by default?
 - It loops through the dictionary’s keys by default.
-
-```python
-for key in person:
-    print(key)
-```
 
 ---
 
@@ -1378,21 +1302,11 @@ for key in person:
 17. What does `"name" in user` check?
 - It checks whether `"name"` exists as a key in the `user` dictionary.
 
-```python
-user = {"name": "Ada"}
-
-"name" in user  # True
-```
-
 18. Does `in` check keys or values by default in a dictionary?
 - It checks keys by default.
 
 19. How would I check whether a value exists in a dictionary?
 - Use `.values()`.
-
-```python
-"Ada" in user.values()
-```
 
 ---
 
@@ -1402,53 +1316,17 @@ user = {"name": "Ada"}
 - A list of dictionaries is a list where each item is a dictionary.
 - This is useful when storing several similar records.
 
-Example:
-
-```python
-people = [
-    {"first_name": "ada", "age": 36},
-    {"first_name": "grace", "age": 85},
-]
-```
-
 21. What is a list inside a dictionary?
 - It is a dictionary where one or more values are lists.
-
-Example:
-
-```python
-favorite_places = {
-    "ada": ["london", "paris"],
-    "grace": ["new york", "boston"],
-}
-```
+- Use this when one key needs to store multiple related values.
 
 22. What is a dictionary inside a dictionary?
 - It is a dictionary where one or more values are other dictionaries.
-
-Example:
-
-```python
-cities = {
-    "athens": {
-        "country": "greece",
-        "population": 3000000,
-    },
-}
-```
+- Use this when one key needs to store a full structured record.
 
 23. Why does nested data need clear variable names?
 - Clear names help you understand which level of the structure you are working with.
-
-Example:
-
-```python
-for city, city_info in cities.items():
-    print(city)
-    print(city_info["country"])
-```
-
-Here, `city` is the outer key and `city_info` is the inner dictionary.
+- They make nested loops and lookups easier to read and debug.
 
 ---
 
@@ -1459,24 +1337,12 @@ Here, `city` is the outer key and `city_info` is the inner dictionary.
 - It also helps the user understand the output without needing to inspect the code.
 
 25. Which JavaScript habits should I avoid when writing Python dictionaries?
-- Avoid JavaScript object syntax habits such as:
-  - using braces for code blocks
-  - using `let` or `const`
-  - using JavaScript template literals
-  - adding unnecessary semicolons
-  - forgetting Python indentation
+- Avoid using braces for code blocks.
+- Avoid using `let` or `const`.
+- Avoid JavaScript template literals.
+- Avoid unnecessary semicolons.
+- Avoid forgetting Python indentation.
 - In Python, use dictionaries, indentation, f-strings, and Python loop syntax.
-
-Example:
-
-```python
-person = {
-    "first_name": "ada",
-    "last_name": "lovelace",
-}
-
-print(f"{person['first_name'].title()} {person['last_name'].title()}")
-```
 
 ---
 
