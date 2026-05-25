@@ -996,16 +996,16 @@ git push
 
 Mark each exercise when completed.
 
-- [ ] 7-1 Rental Car
-- [ ] 7-2 Restaurant Seating
-- [ ] 7-3 Multiples of Ten
-- [ ] 7-4 Pizza Toppings
-- [ ] 7-5 Movie Tickets
-- [ ] 7-6 Three Exits
-- [ ] 7-7 Infinity
-- [ ] 7-8 Deli
-- [ ] 7-9 No Pastrami
-- [ ] 7-10 Dream Vacation
+- [ x ] 7-1 Rental Car
+- [ x ] 7-2 Restaurant Seating
+- [ x ] 7-3 Multiples of Ten
+- [ x ] 7-4 Pizza Toppings
+- [ x ] 7-5 Movie Tickets
+- [ x ] 7-6 Three Exits
+- [ x ] 7-7 Infinity
+- [ x ] 7-8 Deli
+- [ x ] 7-9 No Pastrami
+- [ x ] 7-10 Dream Vacation
 
 ---
 
