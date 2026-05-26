@@ -626,17 +626,30 @@ while orders:
 # Quiz
 
 1. What is a dictionary?
+- A dictionary is a Python collection that stores information as named pairs. It is useful when one object has several related pieces of information.
+
 2. What is a key-value pair?
+- A key-value pair is one item inside a dictionary. The key is the name or label, and the value is the data connected to that key.
 3. What does `.get()` help you avoid?
+- `.get()` helps avoid a `KeyError` when a key is missing from a dictionary.
 4. What is the difference between `user["city"]` and `user.get("city")`?
+- `user["city"]` expects the key to exist and raises an error if it does not. `user.get("city")` safely checks for the key and returns `None` or a fallback value if the key is missing.
 5. When should you use `.values()`?
+- Use `.values()` when you only need the values from a dictionary and do not need the keys.
 6. When should you use `.items()`?
+- Use `.items()` when you need both the key and the value while looping through a dictionary.
 7. Why does `while pending_orders:` stop when the list becomes empty?
+- A non-empty list is truthy, and an empty list is falsy. When the list becomes empty, the loop condition becomes false and the loop stops.
 8. Why must you check for `"quit"` before calling `int()`?
+- You must check for `"quit"` first because `"quit"` is text and cannot be converted into an integer. If Python tries to convert it, the program raises a `ValueError`.
 9. What does `.pop()` do?
+- .pop()` removes an item from a list and returns the removed item. By default, it removes the last item in the list.
 10. What does `.remove()` do when there are repeated values?
+-  `.remove()` removes only the first matching value. If the same value appears multiple times, a loop is needed to remove all copies.
 11. Why should these drill functions return values instead of printing?
+-  Functions should return values because returned values are easier to test, reuse, compare, and combine with other code. Printing is mainly for showing output to the user.
 12. What is the difference between a flag and `break`?
+- A flag is a variable that controls whether a loop should continue running. `break` exits the loop immediately. A flag changes the loop condition; `break` stops the loop directly.
 
 ---
 
@@ -690,21 +703,21 @@ Review in this order:
 
 # Completion Checklist
 
-- [ ] Create `week_04_drills.py`
-- [ ] Create `test_week_04_drills.py`
-- [ ] Create `docs_practice.py`
-- [ ] Complete Drill 1
-- [ ] Complete Drill 2
-- [ ] Complete Drill 3
-- [ ] Complete Drill 4
-- [ ] Complete Drill 5
-- [ ] Complete Drill 6
-- [ ] Complete the challenge
-- [ ] Run manual tests
-- [ ] Add pytest tests
-- [ ] Run pytest
-- [ ] Refactor after tests pass
-- [ ] Commit the finished files
+- [ x ] Create `week_04_drills.py`
+- [ x ] Create `test_week_04_drills.py`
+- [ x ] Create `docs_practice.py`
+- [ x ] Complete Drill 1
+- [ x ] Complete Drill 2
+- [ x ] Complete Drill 3
+- [ x ] Complete Drill 4
+- [ x ] Complete Drill 5
+- [ x ] Complete Drill 6
+- [ x ] Complete the challenge
+- [ x ] Run manual tests
+- [ x ] Add pytest tests
+- [ x ] Run pytest
+- [ x ] Refactor after tests pass
+- [ x ] Commit the finished files
 
 ---
 
